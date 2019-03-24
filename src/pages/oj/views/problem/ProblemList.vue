@@ -2,19 +2,19 @@
   <Row type="flex" :gutter="18">
     <Col :span=19>
     <Panel shadow>
-      <div slot="title">Problem List</div>
+      <div slot="title">题目列表</div>
       <div slot="extra">
         <ul class="filter">
           <li>
             <Dropdown @on-click="filterByDifficulty">
-              <span>{{query.difficulty === '' ? 'Difficulty' : query.difficulty}}
+              <span>{{query.difficulty === '' ? '难度' : query.difficulty}}
                 <Icon type="arrow-down-b"></Icon>
               </span>
               <Dropdown-menu slot="list">
-                <Dropdown-item name="">All</Dropdown-item>
-                <Dropdown-item name="Low">Low</Dropdown-item>
-                <Dropdown-item name="Mid">Mid</Dropdown-item>
-                <Dropdown-item name="High">High</Dropdown-item>
+                <Dropdown-item name="">全部</Dropdown-item>
+                <Dropdown-item name="Low">垃圾玩意</Dropdown-item>
+                <Dropdown-item name="Mid">有点可以</Dropdown-item>
+                <Dropdown-item name="High">十分牛逼</Dropdown-item>
               </Dropdown-menu>
             </Dropdown>
           </li>
@@ -51,7 +51,7 @@
 
     <Col :span="5">
     <Panel :padding="10">
-      <div slot="title" class="taglist-title">Tags</div>
+      <div slot="title" class="taglist-title">标签</div>
       <Button v-for="tag in tagList"
               :key="tag.name"
               @click="filterByTag(tag.name)"
