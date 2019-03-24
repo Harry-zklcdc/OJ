@@ -46,7 +46,7 @@
         </Menu-item>
       </Submenu>
 	  
-          <Dropdown trigger="click" @on-click="switchChange" class="ivu-menu-submenu">
+          <Dropdown trigger="click" @on-click="switchChange" class="ivu-dropdown-menu">
             <div>换肤
               <Icon type="arrow-down-b"></Icon>
             </div>
