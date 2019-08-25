@@ -12,7 +12,7 @@
 }
 .waifu-tips {
     opacity: 0;
-    margin: -20px 20px;
+    margin: -30px 20px;
     padding: 5px 10px;
     border: 1px solid rgba(224, 186, 140, 0.62);
     border-radius: 12px;
@@ -31,7 +31,7 @@
     display: none;
     color: #aaa;
     top: 50px;
-    right: 10px;
+    right: -5px;
     position: absolute;
 }
 .waifu:hover .waifu-tool {
