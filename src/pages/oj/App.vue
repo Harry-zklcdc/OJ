@@ -8,18 +8,11 @@
       </transition>
       <div class="footer">
         <p v-html="website.website_footer"></p>
-        <p>Powered by <a href="https://github.com/QingdaoU/OnlineJudge">OnlineJudge</a>
-          <span v-if="version">&nbsp; Version: {{ version }}</span>
-        </p>
+        <p>Redesign by <a href="https://zklcdc.minenoah.top/">Harry-zklcdc</a></p>
+        <p>Powered by <a href="https://github.com/QingdaoU/OnlineJudge">OnlineJudge</a>&nbsp; <span v-if="version">Version: {{ version }}</span></p>
       </div>
     </div>
-	<BackTop :height="-1" :bottom="10" :right="0" >
-	  <Tooltip content="点我返回顶部" placement="left">
-          <div style="text-align:center">
-            <img class="card" src="@/assets/img/transparent.png" width="100px">
-          </div>
-      </Tooltip>
-    </BackTop>
+	<BackTop></BackTop>
   </div>
 </template>
 
@@ -97,16 +90,11 @@
     animation: fadeInUp .8s;
   }
   
-  .card{
-    display:block;
-    height:120px;
-    width:100px;
-    background:url(/static/img/blue.png) no-repeat;
-	background-size: 100%,100%;
-	background-position: center center;
+  .CodeMirror-gutters {
+    z-index: 1;
   }
 
-  .theme(@ivu-btn-info: #2db7f5, @color: #2d8cf0, @word2: #57a3f3, @color2: rgba(255, 255, 255, 0.7), @url: url(/static/img/blue.png)) {
+  .theme(@ivu-btn-info: #2db7f5, @color: #2d8cf0, @word2: #57a3f3, @color2: rgba(255, 255, 255, 0.7)) {
 
     .ivu-menu-light.ivu-menu-horizontal .ivu-menu-item-active, .ivu-menu-light.ivu-menu-horizontal .ivu-menu-item:hover, .ivu-menu-light.ivu-menu-horizontal .ivu-menu-submenu-active{
         color: @color;
@@ -163,27 +151,22 @@
 	    color: @color;
 		border-bottom: 2px solid @color;
 	}
-	
-	.card {
-    background:@url no-repeat;
-	background-size: 100%,100%;
-    background-position: center center;
-    }
+
   }
   .theme1{  //胖次蓝
     .theme();
   }
   .theme2{  //少女粉
-    .theme(#f58f98, #f58f98, #d93a49, rgba(245, 143, 152, 0.35), url(/static/img/pink.png));
+    .theme(#f58f98, #f58f98, #d93a49, rgba(245, 143, 152, 0.35));
   }
   .theme3{  //基佬紫
-    .theme(#3F51B5, #673AB7, #673AB7, rgba(103, 58, 183, 0.25), url(/static/img/purple.png));
+    .theme(#3F51B5, #673AB7, #673AB7, rgba(103, 58, 183, 0.25));
   }
   .theme4{  //姨妈红
-    .theme(#EF4136, #d63031, #ed1941cc, rgba(255, 118, 117, 0.3), url(/static/img/red.png))
+    .theme(#EF4136, #d63031, #ed1941cc, rgba(255, 118, 117, 0.3))
   }
   .theme5{  //原谅绿
-    .theme(#00b894, #00b894, #55efc4, rgba(129, 236, 236, 0.35), url(/static/img/green.png))
+    .theme(#00b894, #00b894, #55efc4, rgba(129, 236, 236, 0.35))
   }
 
 </style>
