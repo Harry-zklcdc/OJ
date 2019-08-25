@@ -1,0 +1,504 @@
+[33m6add6e7dbb1c60dd1a85b8c5bc62521ac1121010[m[33m ([m[1;36mHEAD -> [m[1;32mmaster[m[33m, [m[1;33mtag: v1.3.10.2.1[m[33m, [m[1;31morigin/master[m[33m, [m[1;31morigin/HEAD[m[33m)[m 修改看板娘大小
+[33m971800f88daa07fc0ec0aecec40433090a11a42d[m[33m ([m[1;33mtag: v1.3.10.2[m[33m)[m 添加看板娘
+[33m77288918b7efbe6abade93a943f63f9712da8b47[m 去除右下角玩偶
+[33m4dab059a9dcff6bfdcff279dc071dc4864d651dd[m[33m ([m[1;33mtag: v1.3.10.1[m[33m)[m fix 'reser' button bugs
+[33m6d44f3d64126abfc4e4159b5a5ab3d707ae5acd8[m Merge remote-tracking branch 'upstream/master'
+[33m7e593632f40370a8a697c8025e1c8c65975ad0d6[m 修改Demo地址
+[33mbb6bf05c24b0d1e6d74252965c961ad5ff376253[m 修改Demo地址
+[33m00a3d345c9c375b414e492a5f198a21d1d431eb0[m Update README.md
+[33mae48c0f5cfc28f2afca5fed9be3740e15be5c10c[m 修改Demo地址
+[33mcdecf6a64fceaf22c833a7310086ca9c0ca4cdef[m[33m ([m[1;33mtag: v1.3.10[m[33m)[m Merge branch 'master' of https://github.com/Harry-zklcdc/OJ
+[33mdb29cf6fab3353c8bb7d58f4612b4d8e10949f54[m[33m ([m[1;31morigin/ide[m[33m, [m[1;32mide[m[33m)[m 添加在线IDE功能
+[33m488107f6c59dce7209d724a29c514b6ecb40036f[m fix bugs
+[33mc46353140351cab8b404f31f3624d6fcd2ff421e[m[33m ([m[1;33mtag: v1.3.10t[m[33m)[m fix bugs；添加travis自动化测试
+[33m9d372b68ee7c57b9260a2390a475ac0a0846112c[m 添加travis自动化测试
+[33m7e050b2127efb52b313e9b4a8297922f0f8d4bad[m fix bugs
+[33m1865267c292b907bfef3ec4416619ee80335b4ac[m 增加在线IDE功能（测试）
+[33mb44dfc6c39d02056f02551638b7bd039e70e7087[m[33m ([m[1;31mupstream/master[m[33m)[m Merge pull request #46 from Geekxiong/master
+[33mf667ac9d3a55737c55a47a6c68e149a0044b84b6[m fix the announcemnet delete confirm ,after the click cancels, it still loading
+[33m8628d61b864350ca1587d4a3f81ef578bc1aabed[m fix the i18n  to
+[33me7d18c6f8bac49cfe0cae8dcf7a230d59efe0f66[m 增加在线IDE功能（未完成）
+[33m285e7aa7f16d9d7b618c14e4fbe5eacd9adcc292[m 增加在线IDE功能（未完成）
+[33m8dd17488046646aaa250d66430b0d4e2632cadda[m 增加在线IDE功能（未完成）
+[33m1bd8c752ab944b238c29d1cb645a8f6d9ef37500[m fix safe vulnerabilities
+[33m6fd7d9715908f6184ab727070e995b9a7ab387e5[m[33m ([m[1;33mtag: v1.3.9.10[m[33m, [m[1;31morigin/aboutus[m[33m, [m[1;32maboutus[m[33m)[m 添加前台获取关于我们
+[33m51b8438f1d5864ae75e8ad8f54767a0e19a1dfbb[m 添加管理员后台设置关于我们
+[33m03b8bae5599b6c1f32360a010ca945fe5047ac07[m 添加修改关于我们功能（未完成）
+[33m5bc6f6774b3d58b645571b47ce9c40baef35a9f5[m 移植“编辑关于我们”至系统配置
+[33m89d73669b8cee69f0934cca2119f3d2767b2c497[m 增加修改关于我们（未完成）
+[33m9b7f5c05e0dfa7cf9921e74507f1c6b859f4b7b1[m 增加后台关于我们编辑（未完成）
+[33m8561c201071ad87a352a2838f6bf1a4439cf7257[m 增加后台关于我们编辑（未完成）
+[33m08a6dfcd8932f9a0c40b4b568a3df5fc3dfe3f52[m 增加后台关于我们编辑（未完成）
+[33mea06d5d8c280e760ab9cd448a86e8e7d85b40a98[m[33m ([m[1;33mtag: v1.3.9.5[m[33m)[m fix ESLint's checking error
+[33m70392a8159363204d4528a24f56aca26dcf131a5[m 添加仅查看管理员功能
+[33m18b0e132ab11dda383518dc6d49cd315886b9ae0[m 修复ACM赛制比赛Rank排名显示问题
+[33m7e1d5225a980ff789a7862d194c98105b54e523b[m[33m ([m[1;33mtag: v1.3.9.3[m[33m)[m 重新修改OI赛制Rank排名表格式；修改ACM赛制Rank排名表格式
+[33mc62361b79eea629b23257ce6db4c4820ab90ba94[m[33m ([m[1;33mtag: v1.3.9.2[m[33m)[m 修改OI赛制Rank排名显示问题
+[33m5c2876fdd24c53afd0ead357c309ebaa55d4ffc0[m[33m ([m[1;33mtag: v1.3.9.1[m[33m)[m 修改换肤按键样式不同；增加颜色示意
+[33md433c305956d7ec6a0ae3b3d902f3e8eb688602d[m[33m ([m[1;33mtag: v1.3.9[m[33m)[m Merge remote-tracking branch 'upstream/master'
+[33m74644d2a576ccbd83d90667793adf3b1420b7682[m[33m ([m[1;33mtag: oj_2.6.0[m[33m)[m Merge pull request #42 from QingdaoU/feature/update_1
+[33mee3baec393b42ab07fb2f1c89254565eb1d5f7c1[m[33m ([m[1;31mupstream/feature/update_1[m[33m)[m bugfix
+[33m9774e9c99a18fd3daeb9e48576b6cb237da2d26b[m share submission
+[33m953d06a3d8f480898e22ca73e0315e80d9a35f02[m bugfix
+[33m5e4b4f35e6ce39bb695cdd1e091695177ca60b9a[m codemirror 增加文件上传功能
+[33m0221065348e7b99ac9b298b9225ec7383b4f3895[m admin 增加题目 io mode
+[33m386db82d0b860c7bc0be461fd298fac84c92e2d5[m 修改删除题目时候的提示
+[33ma0482e3db111259b8cbcf0b5d2c9306f669c5b41[m simditor 增加文件上传
+[33mf09c068b2b29376bc43e2edd507bb04dd5431aaa[m 更新部分按钮颜色和提示问题
+[33m9f5b43e2cbf9ddbda94440451836940907f5d963[m[33m ([m[1;33mtag: v1.3.8.1[m[33m)[m 修改换肤按钮样式
+[33m7d4e7e7a2f97296df347c01d9004869011a2fb63[m 修改换肤按钮样式
+[33mafcfbdeabe388257881e37808f52699fad24dfb8[m[33m ([m[1;33mtag: v1.3.8[m[33m)[m 修改换肤按键错位问题
+[33m996d8362898c58fe4ccab19bed06bed514dcf5c0[m[33m ([m[1;33mtag: v1.3.7[m[33m)[m 修复登录注册按钮不能换肤问题
+[33mf3f415f46c8e31211f6ac86ac1fa8931c7b4db19[m 修复安全问题
+[33me8dccd48def0424ccaa48dc5f40479486463f9a1[m[33m ([m[1;33mtag: v1.3.6[m[33m)[m 修复用户头像上传后错位问题
+[33m7021f362f6fcd36e55374317a84cf8964f2c2c83[m 修复头像上传问题
+[33mae865282b95291e1cd2010eeb9fbc4eba3d1d4d4[m 修复头像上传问题
+[33m81d8a0f80c3356dce530d0de3a01876929e0b11a[m Update ProfileSetting.vue
+[33m9c50d44f700db0b5bff915391b4b25d32191ba59[m[33m ([m[1;33mtag: oj_2.5.3[m[33m)[m fix avatar upload issues
+[33m877a6d9b787922fefc42ca91e7bbaa6da94ac18a[m[33m ([m[1;33mtag: v1.3.5[m[33m)[m 添加右下角玩偶；添加红、绿配色
+[33ma6ebc54135182ab642b3d3ab96df37ff1628a454[m[33m ([m[1;33mtag: v1.3[m[33m)[m 修改 [换肤] 按钮错位，添加主题颜色色调
+[33m7e8601d464cb0a5920fdff091ab23ec09bdbfd7a[m 添加travis自动化测试
+[33m9b7b085f1b35df04f2580b946af366fad50c2a9f[m 添加travis自动化测试
+[33ma220d165d9961c241470c9da62071bc7c7a24a31[m 添加travis自动化测试
+[33m86ba09fca4ec3672691e2ab51b7cbd1e4affb7f5[m 添加travis自动化测试
+[33mdb1051d15a51c647e44d693396b34cd65afef036[m 添加travis自动化测试
+[33mf09cef8f044d5735ecd329f35da1c506f9ede4cb[m 添加编译标识
+[33maa9fad7abe0f4d7c8688a60e98373212b9a3fe50[m 添加编译标识
+[33m84fd35592cd107909b21b1b8b548febb3f306af2[m 修复一小个bug
+[33md88aee1a4d9b7cfd525ae35e2e7c4c0912447659[m 添加换肤特效
+[33m014b6a96664ae96f5a620105649d9f952104ed76[m 修改readme
+[33mea66323b7c4ec196acdd7890c89bc08f5474a715[m 修改界面，添加线条特效
+[33mb98734f3e19cffd7a2b02dfd861b792a60456ef7[m 修改travis
+[33mc647d7268f17e5b3d00c013c964319bfeb4259d2[m 修改travis
+[33m927d86f033dc630c5f34925b7edaeac499da7734[m 修改travis
+[33m6a407edef269302b4588f2333151b60d5120a960[m 修改travis
+[33mbdbe9f9a819311b66fbfe76a966e7613eeb56039[m 修改travis
+[33mc1cddfcad2045d1a6c10c0157af819948427f545[m 修改travis
+[33m71a2d2a634b5c0395ea0e5a8c5855582522ebcbc[m 修改travis
+[33m5af430b091e30dc8b9ff2bedd62c452abb8c624a[m 修改travis
+[33mc5ec9273658039801327b994c0f0bde3c0ee31cc[m 修改travis
+[33m0f38a667f45ec431944b0e0449cc8ab5cb9e6727[m 修改travis
+[33m7bf7c3f5197b23885e629d759bfc3d21ea14038e[m 修改travis
+[33m42cb0fad8be960ad3e4cc827c03eaddb41600a99[m 修改travis
+[33mac03ea4605c3d39fa4cd1c1ff07769f6de5def94[m[33m ([m[1;33mtag: v1.2[m[33m)[m 修改travis
+[33m89aa9fce196ce01a4b4d6cde6d15f73ac42230a7[m 新版OJ，修复bug
+[33m9a50cd3ee610b4c9574917054429e3d2936b387b[m[33m ([m[1;33mtag: oj_2.5.2[m[33m)[m Merge pull request #36 from prefixai/patch-1
+[33m1c24c4bee8d884cd31ad05c5b9a1a5ba322259ed[m Update README.md
+[33m748b326c47f3f4d09550dbff28261e56660d4d1d[m add unit hint for time limit and memory limit
+[33mcca9872ad3a2d3a60c5edd69805f4ff0a4089bda[m correct  button position
+[33m207abfc02bf0b9dbde534b240a1084d1b99d5fd5[m fix sample input and ouput overflow if content is too long
+[33md46c749062d0de7549a61f799843e337916f61f7[m upgrade to node v8.12.0
+[33m69924950e791b45006a3f129254ec863d079166a[m allow running in node v8.x
+[33m13b08ba966cb9e0083d216357a75937a5d880809[m update lots of dependencies
+[33m5017ecd19edff893c20939479359498db8e4cc6a[m[33m ([m[1;33mtag: oj_2.5.1[m[33m)[m allow submission when judgement has done
+[33mb98ce7350a826fc5d8e1bc18e189e7ee8a448ed6[m fix import fps url
+[33mbe457b462bff3cc13080aeb242242537ee239dc8[m[33m ([m[1;33mtag: oj_2.4.0[m[33m)[m set default theme to solarized
+[33m97a672968ee025cc006bcc9e4d1486d350337175[m[33m ([m[1;33mtag: oj_2.5.0[m[33m)[m disable submit button after submitting
+[33m12243757af41305c803bcdcb4fa5d678e523ae91[m save codemirror theme preferences into localstorage
+[33mac45082462316caa63daad72a82f857f63513bd3[m show progress when upload files
+[33m8383897899b9d21b220fcf45e0c1fe099c08442c[m Fixed: problem template loading bugs
+[33ma0bd9143b739ef58b548368004da0eb5622b033d[m Added: contest submissins download method
+[33m45df89ca6f3f5f3e51038658cc132e93be4335ca[m support filter by problemId or displayId in adding problems to contest
+[33mf2fb19b0327ad78b234458bcbcf1c8640f630441[m fix problem title overflow
+[33me77743036f40ae7a1a9ce25e132eb393f065af48[m fix problem title overflow
+[33mc5111ee685043074f4d219c36617b007da3524ef[m put back export/import function
+[33m69a397ac0cf4dc7143b62a6ce3b406578b23cffb[m Merge pull request #30 from ChiahongHong/master
+[33m203f73a11b61df19978b2680d97afe0be19d6316[m 修正譯文
+[33m73c2cdded653e269653b5a0f4b428c94db16a6a0[m[33m ([m[1;33mtag: oj_2.3.3[m[33m)[m Added: katex editor
+[33m431ab1919fd40aad05746ad92b0d0553a6bc5876[m ignore katex parse error
+[33me1c0e9bdd4aeb09c64797e366c54366f993538f1[m[33m ([m[1;33mtag: oj_2.3.2[m[33m, [m[1;33mtag: 2.3.2[m[33m)[m Merge pull request #28 from QingdaoU/language_profile
+[33m9c99e2808a816b467856aabc80c3d448802b6d5d[m move language setting to profile setting page
+[33me0521e5234f67b9ccae01a5c7b5e72588eaf246a[m i18n: add zh-TW
+[33m00fb36871ced3be5ae5b119853f86bf871d4a4a0[m 修复导航栏菜单同时触发的问题
+[33m6643a16b6f5f75879152239ae471bc5f1751c3ea[m[33m ([m[1;33mtag: 2.3.1[m[33m)[m 修复需要主动点击才能添加标签的feature
+[33m6bb0c02db1db15d79d218637589d6a965241970e[m[33m ([m[1;33mtag: oj_2.3.0[m[33m)[m changed default language to english
+[33m7d646281727b8a121c923a7763c80a1489fc35a5[m[33m ([m[1;33mtag: 2.3[m[33m)[m change to dashboard when admin login
+[33m25174155afb5bf542ecb50f8018de2f3eecd3e15[m Merge branch 'zemal_dev'
+[33m52fd9fbb8891be7093352c639ad3724cd9c79067[m support multiple languages using i18n
+[33m8f634c0264b9419fa2f750a64bc36d753d4adbab[m[33m ([m[1;33mtag: oj_2.2.3[m[33m)[m smtp账户不一定是邮箱
+[33m3e7afcae81020181c7a274d43e6e4f77c08c0a7b[m remove the alert in submission detail page
+[33m596fbbcb26a28dd31d1dd0cc5f6d600be045f3eb[m integrate with katex
+[33m2d9fb1c1c8db6be4441f43c60cab7f16a8a5669d[m using vue plugins to wrap highlights
+[33m39f247edca9ed2b2105dc8050cf94d617e1782e2[m update outdated library
+[33m21a9505db20b2bc4e0525f4dae2a3571384912e5[m 增加中英文切换界面 (#23)
+[33maaeda21fdc3e5923c4e351b1f61b45f7b37e4728[m add export rank data to csv
+[33mc466d4849892857d2731ee0a62fcfa3334ab03f6[m admin can only turn off tfa
+[33mbd454af1a176d073f7dfa41098ae822971650a2a[m change contest side bar order
+[33m0c3003127eb398b991a5d09109bfb59aaa73f4e5[m[33m ([m[1;33mtag: oj_2.2.2[m[33m)[m fix problem list styles; fix dropdown menu bug
+[33m21bcf1539dab1431797470c2719854cd0735e89a[m fix typo
+[33m546c4bb540f80dfa6936c8fb7b69c1ab11b1f664[m[33m ([m[1;33mtag: oj_2.2.1[m[33m)[m add google analytics
+[33m81f6f4be49cc688064342b663e4ed054ac5d1c47[m hide export page
+[33mf53ee93230789064131001d9719271f6de186f65[m add fps problem import pannel
+[33m6b2186d5668ac7c8253d4eced0789cce3c0333c0[m Update README.md
+[33m89f532b8d395c5125c71ea5befb4d6ab242a569e[m 修复多次submit code会使setInterval引用丢失导致无限请求的问题 (#15)
+[33m9583fe9a750fdce56d75c5b05d6e280f8214a3e9[m[33m ([m[1;33mtag: oj_2.2.0[m[33m)[m Merge branch 'zemal_dev'
+[33m8bf22e8248f0268b8210b63f468a88f668008cf3[m support problem import and export
+[33m338364678b1eeade39b3bde4d10da6b82e4f1218[m using user's avatar on dashboard
+[33md611ede0af43c4d53dc95025fa8a195e05f4cc07[m[33m ([m[1;33mtag: oj_2.1.0[m[33m)[m fix https check function
+[33m3d332a41ecb8c24edd24f73bea3f12eb4097c998[m fix cdn host
+[33mf2cfe21f6dedf153edc71e2be901a2c5b28fe003[m Merge pull request #11 from QingdaoU/zemal_dev
+[33m169b3b2802736391e6ef41cac0bf103d7bda3ba9[m new STATIC_CDN_HOST
+[33m13ba6ad8e3a86793decb36cca8a8e71251b61a81[m check permission in dashboard page and problem page
+[33m30295670ae0ca9f2e7dcc2f6afeabf01e91d095b[m Add dashboard page
+[33mc108202e4ee355aabb59d44d6560fc82efcc36b6[m use vuex in admin
+[33ma001a6bc6a8971f9efab905593e4c10dd617a9d9[m fix font-size problem in font-awesome
+[33m17e22455b2e0a723e55bd9c0adddea7cfd1f877b[m add info-card component
+[33m78d4d864a6b33f2c8bac027ad287e491ac69370a[m Merge branch 'zemal_dev'
+[33mc2136dd7e03f967a8bb44878e949bf7d6367fd0a[m New version notice when entering admin interface
+[33md2ac2207257a4cf2a9150a13fdfea3ba3b824895[m add judge server disabled column
+[33m1d7976d229f06b309d58024c5e335a0d70beca38[m add smtp test method
+[33m0d50aa1b7759b0298c29708b7ced9ffd6c97010b[m update readme
+[33md9e549a50200947e61e4700de078c938bd5ddaa9[m update webpack build configuration
+[33m16f9e9c174d3bb256424da23f71f1b1c0c9d2545[m upgrade main packages to latest version; lock the packages version
+[33m6dceb51031f89bcd083706722407ba1f46ce8d39[m[33m ([m[1;33mtag: oj_2.0.5[m[33m)[m Merge branch 'zemal_dev'
+[33mdaf79c4b7c663c3693063c83d9363d5bf4fbdf31[m 将vendor_dll的hash放在文件名内
+[33ma960f6261373100546e550e116a1efe3b7ff6962[m Merge pull request #10 from QingdaoU/zemal_dev
+[33ma416adaa686a1fb3412569f7fafcc7f77454c12f[m fix mathjax.hub not defined
+[33mc81d8b10dc5e2873d204ce5832efe33f91bd425a[m 修复submission detail在部分浏览器下不显示代码的问题
+[33md5d3ed11dd5d00fa3da67587745c1e39b566501f[m contest rank细节调整
+[33m9a76e0933b091e55ed0555e134b506ce0b29df4b[m 添加去除无用test_case的功能
+[33m0c57d7c5324a2bd4dbb884c572febdd75403f966[m fix ci
+[33mc5e0b6732f863972d4d1b0fd11145e08e305f90d[m Merge pull request #9 from QingdaoU/zemal_dev
+[33m4a0b7a4bc21593e4f2b2d9f69bf6fed8caad6b8e[m update travis ci
+[33m23950da600a3326ce328e59b0dc98fa97ad9d065[m 部分细节优化
+[33mcb8104cfad46ff8bbd9bc8edac44a4835cd1d165[m 使用travis上传发布sentry_release
+[33me90f0e7aae87d5c614c35b1c9575e692568d11cb[m 按需使用Sentry
+[33m4ac24afa5f345b552805cfee997500988e8372bb[m Merge pull request #8 from QingdaoU/fixes
+[33m69dd6f4570ca8b9c95a5c9cd4194b17ba62cc739[m add sentry
+[33m491ef1b5dbcbf1d087cb24e50c47dd0aa057940a[m allow html in website footer
+[33m0660209af3442f6a5acd10470d9b803d9b27fa94[m Merge pull request #7 from QingdaoU/zemal_dev
+[33m1e844b83846f805faf9b86c9f8987410380928d9[m compatible with IE11's flexbox
+[33m39e24c1a14f7a410280d78533c4e433ac8aa1a3e[m 优化polyfill引入，修复https下dev-server的CSRF问题
+[33mb95fabfd5146648ef2c3758027145740bd079678[m fix problem large pie error
+[33m03902efc8b37774ae07213b241ca909915653836[m[33m ([m[1;33mtag: oj_2.0.3[m[33m)[m fix acm helper error time
+[33mfe2ea6a525ca6453e66b8f880546a86d85ac675f[m Merge pull request #6 from QingdaoU/polyfill_promise
+[33m1ccd6d272b5b1327a63ed9cd5cd40d03cc018a77[m add favicon
+[33m221e18ddab8685365cbc285814eedbf4886a09dd[m add browser check
+[33mfab3087c907cc49db6680c5cacfca6cb5c4b610c[m add polyfill for promise
+[33m5e471f33fa3f6d95e6d29883981f9f5742394262[m[33m ([m[1;33mtag: oj_2.0.2[m[33m)[m 跟随页面动态显示title #5
+[33m646d15e3ee973a17b9d32bd2a4abc2f9d050e3e8[m 修复countdown小时显示问题
+[33maa9159dc6d8afacc8e1ce0659ca3f6167389d6f7[m[33m ([m[1;33mtag: oj_2.0.1[m[33m)[m Merge branch 'zemal_dev'
+[33ma131486a1a17b6c3fc0d49d55c7694a86c46c618[m 测试点score默认为100/测试点数量
+[33mdc30df2949b79935f79fa781bf96a4da8cec9da5[m[33m ([m[1;33mtag: oj_2.0_release[m[33m)[m Merge branch 'zemal_dev'
+[33med7ecc33383a0bf212890e35db09980a501fbfda[m 暂时去除import problem，problem source 移到左边
+[33m9bddcf47fe361ee28dcdd1a50b61fab94726e41b[m[33m ([m[1;33mtag: oj_beta_2.0.3[m[33m)[m Merge branch 'zemal_dev'
+[33m3f733b9975901444280a34bf5ba9b8e1755a3e2a[m 修复概率性不高亮代码
+[33mc2aff6918f4c36d6ce45244ca2b05004fbf2462a[m Merge branch 'zemal_dev'
+[33mc6973b5f6372f216838d0aa8fb52d7afdd11cb71[m tiny work
+[33m179261ef27cfbbca36246884353cda41ec75cae7[m Merge branch 'zemal_dev'
+[33m6ac4bb9fcbfbb5f45bbcd39d3674094b6930321f[m 支持选取已有题目作为比赛题目
+[33m48d36d3141665a6c1f2e7f8d18c197b6cddb1bfd[m add acm admin helper
+[33m1b2b1c036f79d9da7c2d424cb635e20fa130411c[m fix update profile error
+[33mef1075d588b3a7bc0c7d0f31dc32918ea25a64c8[m fix file_id does not exist
+[33m857e08523cd04804ab7d80875f244f733a7e189d[m[33m ([m[1;33mtag: oj_beta_2.0.2[m[33m)[m Merge branch 'zemal_dev'
+[33m25afbccdde7399aad369def1c3ed3ba843dbea94[m 修复本地有代码时依然弹框
+[33m9385754cc0cf67f74329d9b441906af2f2b2ebab[m Merge branch 'zemal_dev'
+[33m89b302a95a5d4a20e70570aa70f93b3d04db18f1[m Merge branch 'master'
+[33m5746a266d7ee5183f66ed4f93611b7f3efc6c951[m Update README.md
+[33m0d5f68c9f29edff25edd3eda726bd4f29aaa336b[m problem mathjax调整
+[33m66063d0ffd3abccd4d67281301581f0400eac0f7[m Merge branch 'zemal_dev'
+[33mec3aba79616822e5b0ecb0fdb7ec5a24de70281f[m 修复problem概率性不显示mathjax的问题
+[33mdf3a76c7e4ace69fb3e76cbf63443948f6e3bd55[m fix simditor upload image problems
+[33m3c983af13a064aaaf34229e867f4989a2c8141bc[m[33m ([m[1;33mtag: oj_beta_2.0.1[m[33m)[m fix user real_name display
+[33ma56588f0b4685de70612e95aeb761b6e8a88c75d[m add LICENSE
+[33m76d09d5904bb857ec9c695b1d36c6234d263768b[m[33m ([m[1;33mtag: oj_beta_2.0[m[33m)[m 调整部分页面分页数
+[33m298047ea6c9500b041c0a33e1f4e541147f3a58a[m 部分样式调整
+[33m0de46da7a4ce5fc67aaafeb7fb8d4b10db659230[m contest rank 管理员可以查看real_name了
+[33m8905d208e9e40e327434b9f183abf3fad4d265d4[m Merge branch 'zemal_dev'
+[33m5de7d608bbcadcfef82ec6817bf0497059410e0a[m Submission_details view show more info for admin
+[33me81bc5a80fd94d797eac3ce5b558120e4385ebec[m Merge branch 'zemal_dev'
+[33m32655f1f79e1626fb47b4b781565a1f49c5e1799[m adjust codemirror line-height, fixed template languages order
+[33m28249159dfe6fc424513fc26ff746d17bf512ed1[m Add tags switch in problem_list.
+[33mb0502919113d09b184ebbd7072d6e157daaeb4c0[m using `NODE_ENV=development npm run build:dll` to build a dev dll
+[33m3b41ab15fc3aa16bc769f1069c240f192ac381cd[m fix text overflow in announcement、problem and submission_details
+[33m1930292ef72a5a10f8426418dc31ec62f177e72d[m codemirror uses auto height
+[33mcdd84dd0f89c1304fb65e6c5079a879aa4ab5954[m Merge branch 'zemal_dev'
+[33mf0c1e34cd03b7edf366f1d0d0a0d493a7d1dcd6c[m about/judge display data from server, adjust problem language logic.
+[33m9cc9c02fb600a653fc04c819cb6224b4d5963723[m 修复windows下无法导入csv问题； 生成和导入用户逻辑调整
+[33m339dca2160231a9136d3cc019d617d2ad8dffd32[m add README.md
+[33mc5fa39768eb6abbd5119c49837f841586f4b6756[m[33m ([m[1;33mtag: elementui-2.0[m[33m)[m user code tag to show token string
+[33m6abc2d9cacfd3edbcc917ba76c35f263921a47b9[m add ci deploy
+[33m8fa5a73779d350baf220683eefd9f93b5cfa933f[m update Problem.vue
+[33md2146d1801e549f49b54e0efa9c969157db978a7[m fix static path
+[33mb0acded40a6a9a717f6489178cc473eee8722607[m add ci deploy
+[33mc03639259dc11c99a72bb4779218a321033e7343[m user code tag to show token string
+[33m2c5a44aa513efd73fe1b6f8de19653a55f41cbcf[m 迁移到element-ui 2.0
+[33m8f767d9f0dd0338fb02d483ccf0226c183a2c321[m submission rejudge
+[33me4ffd574ff1e54a1fd70b07664ef05c439bcd776[m tiny work
+[33m77ac91d7a5df160820cbeeb0ddcc4e1dba41aa40[m 修复firefox无法下载文件的问题
+[33m911e1302eff6a3895641642d102e111702159103[m 更醒目的OI比赛提交提示
+[33mc734895a9c8c1080c32fcf8cb92d36dc8ca6a588[m support import users from csv
+[33mafa661710af4b711dd99d3d7fff897260147fa61[m 修复countdown问题
+[33m49924e166bf66c106a5408f771b57dc5bd5e93d2[m tiny work
+[33mca6c6afb9fd8259330d6a95e73125685f3affdd6[m 支持删除空用户，空问题。 支持批量创建账号
+[33m5e9124f5cccd907e7816e0ed1ed5d64a333c1279[m update nginx.conf
+[33m6b238b3c942e6e0c5a8f8fdd4817ab780cd01132[m problem添加快捷编辑； 修复development mode问题
+[33m9a72d11a40d4b394e958517c4786b26729ffca49[m 添加SPJ problem 需要编译成功才能保存
+[33m35553febb8c09b6039112a6e0c8ccc4a1895d681[m 部分页面添加全屏切换按钮
+[33mce2a3005d266fe668452c063d2ea810a4f07740c[m 后台可以下载test_case了
+[33m1e1887881f4bdd80e1c9ff1346054db22d1e2600[m 优化webpack build
+[33m5197f877bfd4df3d1f1d6b58ee9840823087f2f8[m 修复打包问题； 修复codemirror css污染问题
+[33mc520daab5866180e14fda83715125b69c656a47c[m tiny work
+[33ma8fe319b834b793d132cd978f5383502aa245abb[m 比赛从服务器获取时间作为基准
+[33m8b5e535829abe61b61db52e9aaf7c9940208426d[m Merge branch 'multi-page'
+[33m67c3b97be8df4799a6f6f39ac3ec7d00f62d0f51[m 优化加载本地保存的代码的逻辑; 部分细节优化
+[33m1910fc3bb01ed57a03d70d975d4aa1f9928ae09f[m 完成admin多页迁移
+[33maae172ddf5975cd8375cd39f1deaac1e337a3686[m 基本完成OJ的Multi-page迁移
+[33m24cd413fe13753f70b759c74a313ee3ef3ec13a3[m 更新脚手架
+[33m6f5593cf996dfed75fa24f73ab10f49b11f4ec1b[m contest允许特定IP提交代码
+[33m09ad914c4f52cf2a3e4e1964338e853c1e94d777[m 正确的显示rank排名 problem微调
+[33m9fd2638e67f93bd7d302ffca94ed2e829793d2c2[m 修复OIproblem detail大概率不显示问题
+[33m97667f0e252152bd8af1f2f8789bbc2cdc3520cc[m 临时回滚echarts版本 修复无法编译问题
+[33m3ec455e0be51b6197994bc72238ea13f8abb71a2[m 修复用户名过长在一些图表表格中溢出的问题
+[33m173dee52feee43ff86264d82f23916426d6dd683[m 解决图标低分辨率下xAxis显示不全的问题； 修复countdown问题
+[33mdd5c04266a446328d0f1226b7c9c379136eb7aec[m 解决contest_rank legend和图表重叠问题； 完善图表autoresize
+[33mbc4ab0e938fe3851f9ddc2d22353eff1c55dec60[m 后台announcement和user编辑时防止意外退出； 修复用户名过长不显示； 保存比赛rank limit；
+[33m5a0db5385a55417c820900ff77c94bce977bd2f8[m problem支持MathJAX公式显示
+[33mbbe8065b602ffaac876b7ca26a0066661b45f55b[m Merge branch 'zemal_dev' of github.com:QingdaoU/OnlineJudgeFE into zemal_dev
+[33ma0c14468e4a4a4cf7043cfa54103dc1aebccec34[m 添加contest、announcement、problem的visible快捷操作
+[33ma48cc7de2bc4e2c48b611edcdb1bfa15194becf6[m 合并contest announcement和全局announcement
+[33mdececd5d40b19d67aa614227aea5ac18d12448e0[m 进入contest后再做密码验证
+[33m075257a6b778e85b41c10a6ac295e32465d83cae[m 缓存编辑器中的代码，修复因浏览器自动填充造成的多次请求的问题
+[33m050df1d30c76f949338f9219198da86199b1b72e[m fix style for sample data
+[33m1f6c5ae5affc2fd0d058beca19e22312c1cbeec8[m 支持公开比赛题目
+[33m5e3385fef11a24b0244cb954e60679f8869466bf[m contest rank chart 的状态在整个contest view内保存 admin problem的一些调整
+[33m91f1d91db6794051f1f7a17d0c9ce3af05a6cc21[m 可以在新建problem上传图片了
+[33m5c63c33a86d47b0113ffe00d59e256c317a92033[m 添加首屏加载动画
+[33me7e73e1088b5bf768d095438d766a1fe0dab7cdc[m update nginx.conf
+[33mee989e344b4ecbb5ee5292743943d3b657a12b00[m 整理代码，修复bug
+[33mffd7f04c98f94361a5bc22dbac7e820bbfb870e6[m add home view
+[33m33f0ed9fd9611c42ca148f382b5f4f0e38d5cc4e[m home 页添加全局announcement
+[33mecb7811c9a655597f566ada61c39e4a6557e2ede[m Merge branch 'zemal_dev' of github.com:QingdaoU/OnlineJudgeFE into zemal_dev
+[33m12c8779a2d21ae1a58e33ffb790069568cb37538[m 添加404页面， 支持copy sample数据
+[33m6223062cb20c4693ae89be4e62d4edea3982bd7a[m 修改密码和邮箱时支持TFA验证
+[33mf16c6b1d7bdd5af15639ee043feb803c350cde89[m 添加全局动画
+[33ma3edea3348a63601230b30eb05867c06eccf7aa0[m Add FAQ view
+[33m6b6309ecab261a060513bbb77f0f2afc44778a9c[m 同一IP多次提交需要输入验证码
+[33m88e0b1a711e7d3596080fec65ae54f51147d3d2c[m 同一IP多次提交需要输入验证码
+[33m2b11b7117ba5392c87ac34baceacacc6d903b0d3[m add login view; fix bugs in add contest problem.
+[33m06e007801a49f21ea6a122f2dbca06eccc661577[m Add deploy files; Add about view.
+[33m610ead513a3d88fa623d9e474403b42f3585b5b1[m show problem tags in problem list view.
+[33m1782bc213c325b8fe8e12ad8cb0523f901ffa46d[m 使用分组打包减少首屏时间， 升级脚手架
+[33m160a8d30735cdfb9a68316b1f5f97448b55b8bf1[m 大幅缩减build体积
+[33m7d58f81133ab17c39f8e38d3eed000fda7f3c8ef[m add OI contest rank view
+[33m1b0d2f35ae50f56abdd923cb187e140d19c7ba01[m user oi mode ranklist
+[33mc28ec6ce6e12fe729cc93401ae88424139792058[m fix bugs in oi rule_type
+[33m4384a8199cefb1fe5745cbb918bd0267300bae29[m submission sharing
+[33m1338d7eaeff3e32b3bfdb41094029b3ea688179e[m bug fixes
+[33ma26ef8f6f43737bd001e872bf7fd3cc4c82280de[m 同步后端改动
+[33md7a4f37ef65457affe83898bc6643a36aa334d1c[m 统一js格式
+[33m3b49de51cba4a73fb4ef3522c4e86c12db765719[m add contest countdown
+[33m7b411d91c88efad8575af744e9a34bb3c6137a51[m rewrite acm contest rank chart
+[33me3f0d7eeaeded1dcbe86efb06502ebdc43a0b3ef[m alter code to use standard eslint rule
+[33m9e949be4eb97a489abf9ff92363a3fd347f1d3b8[m totally migrate to vuex
+[33ma4ff420f8ef1e243721536f217b16a6c675aa1ca[m Try to use vuex to store user profile and website config, upgrade some package
+[33m58c859db4419b2bafd20fe3851f39da5e310fe6e[m load website config from backend
+[33m7bc67ecb7d3afea9cb86969f42ec5c16790c5799[m load states from router when returned to problem_list, contest_list, submission_list
+[33mc9d2101e38f5f11513b64196d82bab86a88aabf5[m add user home view
+[33m50ea9bbdf08307739aa1d82f0dd7a5493c713651[m support avatar upload, adjust settings UI
+[33m6642489f97b8d69d28750a6c75ef2ddd65d72c92[m support sessions management
+[33md9fc041279c6522628899724a435c2c6f86be1a4[m support two-factor authentication
+[33m6e0b491b57fe4987de456f3b1cee4e5a68b567a4[m add reset password view
+[33mf6b833594e2ba555c1bf86316b5750a4382495fc[m support update password and send password reset email
+[33m69c3178a58fc77eb6d069ad62e7633bee46a24dd[m 分离不同功能的mixins
+[33m1172dd92ed790f32192c0d5e34136a53084603c0[m add user profile view
+[33md4f63409cc2fd6c9d2ae9d5e62746c25ec3403ad[m 提交过的题目显示标记; 使用Vue.$bus代替eventBus.js; 使用mixin提取problem list 和contest problem list 的公共部分
+[33mffc89ff123c0a1f3c3001e7ca2a78cdc7f9ccb3a[m 添加problem、submission list过滤；抽离panel组件；统一分页变量名
+[33m219b88d1cde03e2a6f94aff9c34a8ca77424bfe4[m 添加acm contest rank chart
+[33med2ff8e57235efe0d857ac3ddb3ab9a150c50b63[m 完成contest rank table
+[33m79056bdc86843c56ceda9230ecaf9978dd810b5a[m admin同步时间改动
+[33mb2a6f32aeb5b8811eb804b552d8e7fd9f181da1c[m 使用filter做时间转换
+[33m5e359d5551730c01b9b157d3ce504e81bb530a74[m 修改contest布局
+[33m08d425a442ab48a258264ee7929eba22f2529110[m 独立出problem charts data
+[33mac4278871b69fc355668637c1433f40e4d341d59[m contest结束禁止提交
+[33m3cac0b8843ef16eb9008854a77cd4833b28b6852[m contest部分细节优化
+[33m4e5bd54249d522497563c2994f2889775ee91b6f[m 修复验证码不刷新的问题
+[33mafce4a52b892ca96843b305913aff0f3b1e16ef7[m acm rank 添加柱状图, 取消echarts的全局注册
+[33m2eda0fc7340e8ff754f77e18c08cd00c0bcc52df[m upgrade ivew, add acm rank table
+[33mf3d77aa59f6537d566dcd58a841eff7ec1c2a1a5[m 重写登录页，合并登录注册view
+[33me2a491fea11502c429aaa9407b1eb18df94ca8ab[m 更新vue版本,完成注册页面
+[33mb636447353db742d2c500216a2a899f58a2789a3[m 完成ACM problem 统计图表
+[33m770e4b4ccf2ce680a097de59b7fecaf39f4d8b2d[m use vue-echarts again;
+[33mca104adeec1880afac1b1c869c5d125d398049ff[m 统一布局风格，启用部分iview自带的栅格布局
+[33mecf27be03fa838a9a538b93b0bdd04f2f0716ec7[m problem详情页改为自己写的flex样式
+[33m0104a6b8c5b70e67cf40972189152885a8b10983[m 完成除ranklist之外的contest页面 进一步复用problem、status页面
+[33mc4b239f66f18b8b0493fbdcf25843b62cca38c15[m 融合problem-submission-list 和 contest-submission-list.
+[33m6ca861b75c2bfb74209eb4310eeba27d66616bd4[m ajax库更换为axios,修复因改动造成的AP错误
+[33m4ca862ae69c86ecdf02000b04aea67dfee699d2e[m add contest announcement.
+[33ma5028b2554252082c9968656500b62a24243c362[m 撸了个VerticalMenu组件，方便竖向导航 完成ContestDetail基本逻辑 完成Contest认证相关逻辑
+[33m44a11a1473b373ea7421df348af7232747d300ad[m 参照iview写了个verticalMenu方便复用 规范组件命名 添加`~`作为components目录简写
+[33m333f1a246906f2a34b76568275341abe7e4d4aa2[m 修复tag显示问题 增加contest的新建problem入口 修复路由从contest-problem-list到problem-list不能正确请求数据的问题
+[33m1bbe2005f4b0f0294bf389224751592b77ea0065[m fix warnings in v-for.
+[33mea3db29b870f7b0e34a06d792dd05eb40576503e[m admin大量组件、库版本更新（bug稍候修复) 脚手架更新 去除测试相关配置
+[33mab4fbca6c8f7e2864bb9144fda097144c52d794d[m contest list UI 优化。
+[33mccb74cd3055760011f1a66d65658bad05d2b861e[m 添加CONTEST_STATUS常量
+[33m293a96a8b13a3ce2c1a388879d66f9160949a243[m basic contest list.
+[33m1e6a8e1ac21bee063baec83893fe92809eb6fb75[m 增加代码高亮highlight.js; 增加提交也导航，将导航组件抽离以便复用。
+[33mf3f94bdb7566009775239f944b0dbf1ecd7069e6[m 完善提交列表细节，完成提交详情的逻辑部分
+[33m6a8d2fb285d389129932bad8c91c5843d5be1d8c[m 同步后台submission改动，status页面仅能查看用户有权查看的提交
+[33m9238bf76de8a3c8b57657b45a33fcec2cb18e74e[m problem使用_id作为显示和请求ID，status list页面添加更多字段
+[33m851e3127acbb61198b998cfa72dd7a858860246d[m 修改problem布局 添加基本的status页面
+[33m243617c9af8b17da0b33a96b20768aef0baf579b[m 跟随后台api改动
+[33mc2c50dc4b61b7ca1ef00ff12b64c44f1d1a4f410[m add problem information.
+[33m4cec1539477b1cacc7f888cb689a5d9d2c336e8c[m 增加consts.js；完成基本的判题功能
+[33m79115093a6441f4643e453e8d2cc60d8c1fb52fa[m 重写codemirror和problem组件
+[33meb9d3ce4bd529e782612fb4dbbffb21e13420a28[m add breadcrumb.
+[33mb690f5bae33484251f66f35f49832f0fac801880[m 完善问题列表
+[33m515eb2b81df2f8e3b7ca57ee494e1b556b9dc4b1[m 修复大量因更改框架造成的问题; 重写problem_list的部分逻辑； 基本完成用户验证相关逻辑。
+[33m8ff520fdc04a56e122215d2065eb70bbb8533efc[m 1. 前端UI框架更改： 弃用ElementUI,改用iView 2. 更新大量陈旧组件，使用新版vue-cli的build文件 3. 加入LazyLoad机制，提升首次打开页面的速度 4. 文件结构改动，更合理更工程化。
+[33ma3049ce2852e2a0a4b6b873dc3551067b916fba9[m 更新problem显示。
+[33mf0d65c156578ba7949b43a44c8300e8925b7d0af[m 改写navbar
+[33m34982d16198d1e9824b883d178712b4724f8272a[m 去除codemirror一个皮肤； problem修正clearInterval()方法。
+[33m8734cfaa27b8c672bc0c52d322aabd43802d556b[m 实现基本的代码提交功能。
+[33m0f9adb376de7b897f4e7bf7dfbbb657f88008597[m 更新codemirror布局方式
+[33m8206045861bb094965a09c282fbad1e2cc006d33[m 更新codemirror組件，現在支持选择语言和主题了 去除不必要的组件 修复eslint错误 添加gitignore
+[33mdfc41d581d9de4583d3d4286bb6304e98934ef39[m Merge pull request #2 from QingdaoU/chiaki_dev
+[33mc80b61ce0ae5e4972f59548bd11f26c2f1d1d984[m Merge branch 'zemal_problems' into chiaki_dev
+[33md38901e14116e5432a5b4fb664e33a8ab5c0ab93[m Add problem_list.
+[33m67cd25eaa89e03cf99981d16861728ff7aa97b2b[m Delete some unwanted files
+[33mda6d8286adc1285faea0567d18fdc010c6792ad5[m Finish login and setting modules
+[33me2528d0bf5d86cc4510906abcc55290945c0485a[m Add login and register modules
+[33m1cbe888a7fc13402db3ddccd43ec6c7b3c5fd9dc[m adjust basic configuration
+[33mf25f5e94f70ad5b9840b001405cd1b4bb6f1db49[m init
+[33mf061a648bf2edccad13d0de14c74b939941ebaac[m init oj
+[33m8d6c212c3329874b4851ef43b6b814001b399ea0[m package.json
+[33mc2ecee067302c60c05454636ea22e4d12d770080[m add oj
+[33m2ca79b315881db97d1ad49c38c8fe92f66e8b784[m add import problem uploader
+[33m4937bb98cba55fb543b7e9fdd1ed2c1a005329d5[m remove keep-alive
+[33m50714a46eb0073fbcea95f4eb92c9b01c1a49c0c[m user problem permission is changed when admin type is changed
+[33m7c550f76a01efecf3d488f57b997f1a01e27a01e[m remove keep-alive
+[33md6b0b16c90efb1ffe5b266c67712c7f8e8879b13[m fix some bugs in keep-alive list page, but still some small issues
+[33m4ca23dad213a9e06a1876fb09e4cd2a3ce29969d[m add some page
+[33mb03376fd8c865b0a14ec131db069ca20f0ec5c20[m add ci
+[33m7c1710b55ea8b8e4365c0b6cd068c45690c3cf57[m add travis ci
+[33ma7c80e01a8deab454fe3b4187f2e755cc6af8afa[m update background colour
+[33m3701336767cb45768d80c90ac9d71887442aac90[m fix typo
+[33mdd46e2fe6d4d255408eaa04c28e3d3382e1a2a6e[m user Cancel and Save component
+[33m8742966cdf1afefaff5ad1e7f77fe57629430b5a[m use global component
+[33m74a5a1cf60d2be0d1c395d9930c2c531a6790014[m add icon button
+[33m32fb7ce19aea5b9a27d65151ab4cbe1b1e68c327[m update for contest problem
+[33mf01256c23ef863386003764be1926490cde49f10[m update user problem permission
+[33m25c8f3efb5acafb83408fecbac9620e663f951c2[m add build version
+[33m436223cae01509d7177564eb26ea045295b80946[m delete tests
+[33m551878bbbdff2068c70fc6c8e198303fd66e862c[m remove unnecessary dependences
+[33m47d9bcf3913e2671d6cf271000c3f7025c4194bb[m support display id
+[33m5061a3b2e6a69e0b2ac8de4ff8626eb3b6fad2e8[m add footer version
+[33mc2e229a9e11b4b8bb269f2cfc3c5de3c8fa59b16[m ignore some unnecessary js files
+[33m2dc577a71b2b05435d9f3ee566f8f621495ae12d[m reset vm after item is saved
+[33m5cc50aa209c81256ac5382db4d9b9801684309f5[m turn simditor locale
+[33mb1b0fa0814a8dad4088e29f8f87c42df4854ec28[m fix wrong base url
+[33m08bc3316c031d882c70becd4526ccc5915dc28f4[m fix codemirror init error
+[33m8ce3aaf1255f658e0f83c3dbad4559991ed49089[m save webpack stat for analysis
+[33mb3030032d82423c425b522d1d7e24d4fe1f74d57[m merge page
+[33mfbd2ffe672e903236c72d9e610721e19175abb4c[m merge some duplicate page
+[33m230e5f228b76355a03b54a5935cdffde5489f25a[m code mirror auto resize
+[33m1d33c4bd9bc48f007cae4675be4bec66059b7b35[m get default problem template from api
+[33m17d21011570e7d13ba8457550abe357a967e2afd[m add problem code problem func
+[33m2c51bb6777425ab09d3fae08fb9ff7a071fffc47[m update switch spj config msgbox
+[33m2428d827496bd5fbb94bff0b9f53dcd5d5ee6908[m vue-router history mode
+[33m3d78beb325ef9cb2fe030ebe6db652e3711c23ac[m fix code mirror style issues
+[33m16102f44ad7369de4b05f847bb9ea2eb43dcc919[m add code mirror default config
+[33m853176bd094194dba7231842d1f6a482455c3048[m bug fixes
+[33me4633f89df6fceaa80dabb2ddfa22b9b1ac8b5e8[m fixed problem page bug
+[33m41d3dd6e26ed4bf1703783f2d6805c10f817772c[m 修复在v-show中存在的样式问题
+[33m0e201111774f8a1212c29b4cdd575a136b4a2fb3[m edit problem compltet
+[33mb9c7045afe5718a926ef239817ea7298cf60853c[m add code mirror
+[33m36102c41d107c05a5ede094655c52a961a1bcd64[m remove loading in judge server page
+[33mfb1c113ea81a1bd91e087c966b4c826c521ae000[m update create problem page
+[33m70136956a5567646b909624f8cf3d6b1578afa4e[m 修复添加sample按钮第一次点击时刷新页面bug
+[33mbc9b4b6b7ff3b101cda02ff766bae06cd11375c7[m add moment dependencies
+[33m03f9c858df7a9c32e2ad307fd3da1c8bd9ca83de[m update create problem page
+[33m2db46c7447b409a4472654f9ffaa423b3d07ef25[m refine add problem page
+[33m4220cb03fc75a54ec405e14e16d162c00bf1f4d1[m add component name
+[33m448df73c88e056379d825fcff435ffe225223133[m contest announcement page
+[33m1fdfbfced3678d4c11fb5c9914baf10159906cd5[m 简化部分翻页参数
+[33m9646217993fdb8945f53d1358373700e485846bf[m 对比赛列表开启keep-alive，然后增加query参数强制刷新数据。
+[33m85d1c5e6223a36796d7c38ee19728278ecc054c1[m fix date time format error
+[33mf3e0fb43b3773a5d24da17c2c213486cfbe77e9d[m Merge branch 't-dev'
+[33m138c6ba2da3f8f44e3e012ab960f494d9f4b2c5a[m Merge branch 'v-dev'
+[33mab89581e04880531c9870c0acf0db58e72079f6e[m add select enablelanguage
+[33m0d4b497037956e6da56c169e6ffab986c5451f32[m add edit contest page
+[33m2c16badd8774a566b2154d3942fb3442d19cc61a[m keep alive
+[33m1284331baf625fd63cd097ed8c40657f8c4b012a[m Merge branch 'v-dev'
+[33m49828094fabc72753a3d23316f475071915d7949[m use raw api data to fill vm
+[33meae0b78a25af96baeee5a5ba2c003083f651c592[m add label required
+[33mfa6203df572c060558c9732778e715037ba22331[m Merge branch 'v-dev'
+[33ma4711409a478a3c598a50b12c6f85f779e349a7d[m add contest related page
+[33mc33e0e02a26e8f79527d52c7128cf9c48ff5495b[m complete problem page
+[33m205e51c0c18fd41863a885720a9cdfc4edb337b6[m fixed one page use mulitiple Simditor component bug
+[33mdaede353fb8c272c2f07edd506a4089ceca75ee3[m add contest visible status
+[33mf36a67aa7e17bc28bec1bbdfb5dc37d8cbfd443a[m refine some switch style
+[33md29ef24ab4619ed257b6561ed71c585df1a6f58b[m add problem real time rank switch
+[33mbdfccdbdcf018450257a51ce4856347d1e44ce10[m use empty placeholder
+[33m3857dc09c0d84d0ed0d2df5b8085159d17eed0d2[m Merge branch 'master' of https://git.coding.net/tw888/OnlineJudgeWebApp
+[33m7b86b55fc83dc29f71f3f5368991f4a67bdaa840[m increase width of size Panel
+[33m832c07314273e946a9d4f3cbe8713b543c07981a[m fixed normal mode not update model bug
+[33m0530b76a1cd8872dbcb0aabfb30affeb0a9e29c0[m Merge branch 'v-dev'
+[33m9a7ff300ad3d78e8df34b991adf0edfbe5084622[m fix router bug
+[33m77cf7de3d5503941df7a48b26ba225157576885d[m fixed a bug
+[33m4d4ce746657e3374fa6e4a9c0257998cb98ea325[m add basic contest page
+[33mdd1728c81995d3634c5db8f1b55b1e9da7d2c81d[m add problem sidemenu
+[33meca6703e154f0eca4818295b65f9da7699c2ba02[m Merge branch 'dev'
+[33m67cfe95b2b09015d6b8a12522434960f759e1ea6[m add pages to general dir
+[33mf6abc1ab8998079f7879f61d6b59e81030395957[m allow visible field when create announcement
+[33med30f7956332f9e743c28b10a3a3d6a893ec2be1[m Timestamp to milliseconds
+[33me33871f276b278769a6101407ad7c59202c4e175[m clear interval when leave page
+[33mcf23108d3dd4c9ae2e3bcc9674a7554728574ce8[m use moment.js
+[33m8d8d84fc7d72a0c74378ad13d115b17736c9f1ea[m refine announcement page
+[33m10940b2c2bb0d5ed1315b09ba6e62ffdcd4b2a9f[m chinese -> english
+[33m7f62e25f4c073185749968a66437284a32c8fbed[m add problem page
+[33mff47f6cc86d7c0a0ce6fe3a2551d86cdf549e064[m replace delete icon with text
+[33m4b036a348d94f917cb1e15618b129e06154fb678[m get proxy target from env args
+[33m93b99daf82792750b83ee66abd6838797a7c5780[m refine some text
+[33mad0ea523dace297b42cc02af461a401ef0007727[m judge server table add loading
+[33m9be410f3948c3892d79ece8206a70abc6738a914[m add search user function
+[33mb4ce0d5dbe028b2cbbda8197dedf297e67dd9ae6[m remove multi select
+[33m462b12340cba6d23cfc55025cdc2397d31e69339[m refine user list
+[33m7bd63ac4a18328ac430207f10fb1e9829ad1a5ce[m expand all rows by default
+[33m69e6ae708c2e1adb437fd0112375c21920873abe[m refresh judge server list
+[33m006ee3066fabefdd6cdefd111285bbdf2bcd9f7f[m update judge server table
+[33m9fd2b7b4aa25506e74dea642faa64ac4adc2a8c3[m add new page
+[33mb7fee2af9f5eaa738935151df4b2db55572897af[m improve the user list
+[33m68c9969043dfefb752f865d4d9755e7174386aab[m relogin x-CSRFToken bug
+[33mfe5de6fd0a3c9941ae540da5e54d27fb1d747b23[m add loading.and renderer change to webkit
+[33m0ad3ed5e2734209000344f648792ba9f66f31f8e[m d circulation bug # Please enter the commit message for your changes. Lines starting
+[33m9f99fa8bc2db239abd4644f042a65ee154a01f57[m properties  change to es6 writing
+[33m1a099c9cf26ca8622d496e7f4a9d109dade6ddfa[m add deleteAnnouncement,modifyAnnouncement,createAnnouncement
+[33mec6fc1f84baf61758fb70102abb95c95641265d3[m add promise module
+[33m979c83eb657376676875398e0c824193d5f283c5[m add global http request callback
+[33ma9b65c13130208034f704f0eeb417961c3cc9c3f[m replace window.xxx to Vue.$xxx
+[33m88af5633120fe4273c49781aa73dd7aab693da4a[m Fix some bug
+[33m615513fadd44b16d694f730de448c9037eb83fe8[m rename: src/views/announcement.vue -> src/views/Announcement.vue
+[33m889819ac190460ef251f20971ca2f87cb346da65[m Merge branch 'dev' of https://git.coding.net/tw888/OnlineJudgeWebApp into dev
+[33madcbf2c4ad34c2ce61ce7d3818e6ccfe3978aaee[m change edit announcement model
+[33m814932e0c4aab0091a5daeca2b03b9e72e0e9952[m update cons page style
+[33m9b47747949a8864f247e1ec7bb3d81e7b84e645d[m change side menu with url link
+[33mde6c78025f8fbdb6f1269b009071879fa85ebef9[m fix user api link
+[33m4f4bead69ddb3e2c19bcd9f5745b9431da48f89c[m add page links in side menu
+[33m9cb009d9a3adf65f2cbd37ebb96cce30196c6b83[m fix some style
+[33m4e2ed3f14a7c4c2e388baf98309cdb6ee993db3d[m change label location
+[33m7326e80b4cb45cee6222f0ac3c685dbbdf8efa73[m add csrf token and some useful function on window
+[33m77a2ebd81a62662922a69f0953a1cc375394bccf[m add conf page
+[33m7f84c434da0a3e5b931d4266a57528530acf883f[m normalize variable name
+[33mafd884a4169ef81e15e131687ddf0e43aaeeb362[m add simditor-markdown
+[33mae7c6dd5eab5d18cd03edfe1f33591f9a684ec6b[m modify login function
+[33m2354430117c2eedf5ed28b9fed4d89e554e03cab[m modify option button to each line
+[33m98f175f7238f1aed4203dcc65bca31fc40f29c61[m normalize css and js variable name
+[33m2cd4bbc8a32be3eeb5002580a565a3b0b5373c46[m normalise file name
+[33m81a8a224fd1344311b23f2c0ad9ab7b361f36404[m add userList.vue
+[33m0d035e9053bb38ef24b91005bc233bec1acbd53f[m change to english
+[33m623d4dbf783d15bbaad2fe486505eb501518de56[m add userList
+[33mab0e59fe029f2681235a5764585fc913b2709c72[m 为Simditor组件 添加v-model
+[33m165d3a6a2d37e8f915579f101d043a6a53fec78b[m 添加Simditor组件 修复了分页和筛选的bug
+[33m9633bced3113a9c3a355bcc92f14e01c1c014528[m 添加Simditor组件和编辑对话框
+[33m8c21a2f2c54f7de0e3630160a3d6efdf11aca7fa[m 小优化
+[33m4778c172d18650682a3da7d36a9edfb7befc2865[m 为按钮添加disabled
+[33m9afb352ea11ad85663804a13c571fa3a7bc91bb2[m 添加分页
+[33mbe4dbc28a211ed5b6c1156c53e1ebce8b0333db3[m 添加排序和筛选
+[33m623c39db0b3d9d294dc3f6cfb07829d1ea034ea1[m tw
+[33m3575a11733266296383df06fd6d44e3ac5a3a6ac[m 修复了ajax小bug
+[33m9770526e3b8d7bcf152342007f433722a217b2cc[m 增加ajax方法
+[33ma06eb3dd87e847316220bdc91f6ebda83186ffce[m tw
+[33m92a036863b1acfc5b1f9d5da0fbe412c9c74ef7e[m 删除不必要的文件
+[33mabd8bb7b9d4e497b0eb0b559280d9fcb8ab1914b[m init
+[33mb436ffc2cbf02e7f2c4b084c23748a9d9ea870b2[m Initial commit
