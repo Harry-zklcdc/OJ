@@ -55,7 +55,7 @@
 </template>
 
 <script>
-  import CodeMirror from './CodeMirror.vue'
+  import CodeMirror from '@oj/components/CodeMirror.vue'
   import {FormMixin} from '@oj/components/mixins'
   import {JUDGE_STATUS} from '@/utils/constants'
   import api from '@oj/api'
