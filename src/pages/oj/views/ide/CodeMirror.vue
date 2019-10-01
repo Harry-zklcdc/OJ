@@ -70,7 +70,7 @@
       languages: {
         type: Array,
         default: () => {
-          return ['C', 'C With O2', 'C++', 'C++ With O2', 'Java', 'Python2', 'Python3']
+          return ['C', 'C++', 'Java', 'Python2']
         }
       },
       language: {

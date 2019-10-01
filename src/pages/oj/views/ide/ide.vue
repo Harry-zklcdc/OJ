@@ -4,7 +4,7 @@
       <Card :padding="20" id="submit-code" dis-hover>
 	    <p slot="title">{{$t('m.IDE')}}</p>
         <CodeMirror :value.sync="code"
-                    :languages="languages.name"
+                    :languages="languages"
                     :language="language"
                     :theme="theme"
                     @resetCode="onResetToTemplate"
@@ -97,7 +97,10 @@
     },
     mounted () {
       api.getLanguages().then(res => {
-        this.languages = res.data.data.languages
+        for (var i = 0; i < res.data.data.languages.length; i++) {
+          this.languages[i] = res.data.data.languages[i].name
+        }
+        this.language = this.languages[0]
       })
     },
     methods: {
