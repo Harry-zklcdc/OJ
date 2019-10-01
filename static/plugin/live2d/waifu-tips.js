@@ -227,7 +227,7 @@ function loadTipsMessage(result) {
         if((after.split('/')[0] <= now.getMonth()+1 && now.getMonth()+1 <= before.split('/')[0]) && 
            (after.split('/')[1] <= now.getDate() && now.getDate() <= before.split('/')[1])){
             var text = getRandText(tips.text);
-            text = text.render({year: now.getFullYear()});
+            text = text.render({year: now.getFullYear(), found: now.getFullYear() - 1949, success: now.getFullYear() - 1945});
             showMessage(text, 6000, true);
         }
     });
