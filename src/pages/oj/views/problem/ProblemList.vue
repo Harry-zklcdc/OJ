@@ -52,6 +52,12 @@
     <Col :span="5">
     <Panel :padding="10">
       <div slot="title" class="taglist-title">Tags</div>
+      <Button long id="pick-one" @click="pickone">
+        <Icon type="shuffle"></Icon>
+        Pick one
+      </Button>
+      <br>
+
       <Button v-for="tag in tagList"
               :key="tag.name"
               @click="filterByTag(tag.name)"
@@ -59,11 +65,6 @@
               :disabled="query.tag === tag.name"
               shape="circle"
               class="tag-btn">{{tag.name}}
-      </Button>
-
-      <Button long id="pick-one" @click="pickone">
-        <Icon type="shuffle"></Icon>
-        Pick one
       </Button>
     </Panel>
     <Spin v-if="loadings.tag" fix size="large"></Spin>
@@ -214,7 +215,9 @@
       },
       getTagList () {
         api.getProblemTagList().then(res => {
-          this.tagList = res.data.data
+          this.tagList = res.data.data.sort((a, b) => {
+            return a.name.localeCompare(b.name)
+          })
           this.loadings.tag = false
         }, res => {
           this.loadings.tag = false
@@ -296,6 +299,6 @@
   }
 
   #pick-one {
-    margin-top: 10px;
+    margin-bottom: 10px;
   }
 </style>
