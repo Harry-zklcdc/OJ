@@ -270,6 +270,12 @@ export default {
     return ajax('ide', 'post', {
       data
     })
+  },
+  GetSighinStatus () {
+    return ajax('sighin', 'get')
+  },
+  UserSighin () {
+    return ajax('sighin', 'post')
   }
 }
 
