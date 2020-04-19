@@ -167,12 +167,12 @@
           if (res.data.data === 'Singined') {
             this.$Notice.error({
               title: '签到失败',
-              desc: '客官，您已经签过到了呀 ~ 明天再来哦'
+              desc: '稳健佬，您已经签过到了呀 ~ 明天再来哦'
             })
           } else {
             this.$Notice.success({
               title: '签到成功',
-              desc: '客官，明天记得来签到哦'
+              desc: '稳健佬，明天记得来签到哦'
             })
           }
         })
