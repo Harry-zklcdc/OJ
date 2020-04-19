@@ -169,6 +169,7 @@
               title: '签到失败',
               desc: '稳健佬，您已经签过到了呀 ~ 明天再来哦'
             })
+            this.isSighin()
           } else {
             this.$Notice.success({
               title: '签到成功',
