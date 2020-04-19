@@ -174,9 +174,10 @@
               title: '签到成功',
               desc: '稳健佬，明天记得来签到哦'
             })
+            this.days += 1
+            this.SighinStatus = true
           }
         })
-        this.SighinStatus = true
       }
     },
     computed: {
