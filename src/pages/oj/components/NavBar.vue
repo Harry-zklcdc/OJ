@@ -115,7 +115,6 @@
   import { mapGetters, mapActions } from 'vuex'
   import login from '@oj/views/user/Login'
   import register from '@oj/views/user/Register'
-  import { USER_GRADE } from '@/utils/constants'
 
   export default {
     components: {
