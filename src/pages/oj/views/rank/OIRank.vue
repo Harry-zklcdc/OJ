@@ -19,7 +19,7 @@
   import api from '@oj/api'
   import Pagination from '@oj/components/Pagination'
   import utils from '@/utils/utils'
-  import { RULE_TYPE } from '@/utils/constants'
+  import { RULE_TYPE, USER_GRADE } from '@/utils/constants'
 
   export default {
     name: 'acm-rank',
@@ -44,21 +44,28 @@
             title: 'user',
             align: 'center',
             render: (h, params) => {
-              return h('a', {
-                style: {
-                  'display': 'inline-block',
-                  'max-width': '200px'
-                },
-                on: {
-                  click: () => {
-                    this.$router.push(
-                      {
-                        name: 'user-home',
-                        query: {username: params.row.user.username}
-                      })
+              return h('div', [
+                h('Tag', {
+                  props: {
+                    color: USER_GRADE[params.row.grade].color
                   }
-                }
-              }, params.row.user.username)
+                }, USER_GRADE[params.row.grade].name),
+                h('a', {
+                  style: {
+                    'display': 'inline-block',
+                    'max-width': '200px'
+                  },
+                  on: {
+                    click: () => {
+                      this.$router.push(
+                        {
+                          name: 'user-home',
+                          query: {username: params.row.user.username}
+                        })
+                    }
+                  }
+                }, params.row.user.username)
+              ])
             }
           },
           {

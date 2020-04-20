@@ -45,7 +45,7 @@
 <script>
   import { mapGetters } from 'vuex'
   import api from '@oj/api'
-  import { JUDGE_STATUS, USER_TYPE } from '@/utils/constants'
+  import { JUDGE_STATUS, USER_TYPE, USER_GRADE } from '@/utils/constants'
   import utils from '@/utils/utils'
   import time from '@/utils/time'
   import Pagination from '@/pages/oj/components/Pagination'
@@ -74,21 +74,29 @@
             title: 'Author',
             align: 'center',
             render: (h, params) => {
-              return h('a', {
-                style: {
-                  'display': 'inline-block',
-                  'max-width': '150px'
-                },
-                on: {
-                  click: () => {
-                    this.$router.push(
-                      {
-                        name: 'user-home',
-                        query: {username: params.row.username}
-                      })
+              return h('div', [
+                h('Tag', {
+                  props: {
+                    color: USER_GRADE[params.row.grade].color
                   }
-                }
-              }, params.row.username)
+                }, USER_GRADE[params.row.grade].name),
+                h('a', {
+                  style: {
+                    'display': 'inline-block',
+                    'max-width': '150px',
+                    'margin-left': '5px'
+                  },
+                  on: {
+                    click: () => {
+                      this.$router.push(
+                        {
+                          name: 'user-home',
+                          query: {username: params.row.username}
+                        })
+                    }
+                  }
+                }, params.row.username)
+              ])
             }
           },
           {

@@ -23,7 +23,9 @@ const getters = {
   },
   hasProblemPermission: (state, getters) => {
     return getters.user.problem_permission !== PROBLEM_PERMISSION.NONE
-  }
+  },
+  grade: state => state.profile.grade || {},
+  experience: state => state.profile.experience || {}
 }
 
 const mutations = {

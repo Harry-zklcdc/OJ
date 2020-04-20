@@ -52,6 +52,7 @@
   import ContestRankMixin from './contestRankMixin'
   import time from '@/utils/time'
   import utils from '@/utils/utils'
+  import { USER_GRADE } from '@/utils/constants'
 
   export default {
     name: 'acm-contest-rank',
@@ -79,21 +80,27 @@
             minWidth: 100,
             fixed: 'left',
             render: (h, params) => {
-              return h('a', {
-                style: {
-                  display: 'inline-block',
-                  'max-width': '150px'
-                },
-                on: {
-                  click: () => {
-                    this.$router.push(
-                      {
+              return h('div', [
+                h('Tag', {
+                  props: {
+                    color: USER_GRADE[params.row.user.grade].color
+                  }
+                }, USER_GRADE[params.row.user.grade].name),
+                ('a', {
+                  style: {
+                    display: 'inline-block',
+                    'max-width': '150px'
+                  },
+                  on: {
+                    click: () => {
+                      this.$router.push({
                         name: 'user-home',
                         query: {username: params.row.user.username}
                       })
+                    }
                   }
-                }
-              }, params.row.user.username)
+                }, params.row.user.username)
+              ])
             }
           },
           {

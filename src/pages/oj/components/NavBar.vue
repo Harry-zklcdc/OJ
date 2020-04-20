@@ -87,6 +87,9 @@
       </template>
       <template v-else>
         <Dropdown class="drop-menu" @on-click="handleRoute" placement="bottom" trigger="click">
+          <Poptip trigger="hover" :title="`当前 ${grade} 级`" :content="`您还需要 ${content} 稳点才可以升到下一级哦 ~`" width="200px">
+            <Tag :color="color" style="margin-right:-15px;">{{gradename}}</Tag>
+          </Poptip>
           <Button type="text" class="drop-menu-title">{{ user.username }}
             <Icon type="arrow-down-b"></Icon>
           </Button>
@@ -112,14 +115,25 @@
   import { mapGetters, mapActions } from 'vuex'
   import login from '@oj/views/user/Login'
   import register from '@oj/views/user/Register'
+  import { USER_GRADE } from '@/utils/constants'
 
   export default {
+    data () {
+      return {
+        color: '',
+        gradename: '',
+        experience: 0,
+        content: '123'
+      }
+    },
     components: {
       login,
       register
     },
     mounted () {
       this.getProfile()
+      console.log(this.grade)
+      this.Grade()
     },
     methods: {
       ...mapActions(['getProfile', 'changeModalStatus']),
@@ -147,10 +161,29 @@
         let memoryColor = window.localStorage.getItem('app')
         let params = document.getElementById('app')
         params.className = memoryColor
+      },
+      Grade () {
+        this.color = USER_GRADE[this.grade].color
+        this.gradename = USER_GRADE[this.grade].name
+        if (this.grade === 0) {
+          this.content = 100 - this.grade
+        } if (this.grade === 1) {
+          this.content = 200 - this.grade
+        } if (this.grade === 2) {
+          this.content = 500 - this.grade
+        } if (this.grade === 3) {
+          this.content = 1000 - this.grade
+        } if (this.grade === 4) {
+          this.content = 5000 - this.grade
+        } if (this.grade === 5) {
+          this.content = 10000 - this.grade
+        } if (this.grade === 6) {
+          this.content = 'xxx'
+        }
       }
     },
     computed: {
-      ...mapGetters(['website', 'modalStatus', 'user', 'isAuthenticated', 'isAdminRole']),
+      ...mapGetters(['website', 'modalStatus', 'user', 'isAuthenticated', 'isAdminRole', 'grade', 'experience']),
       // 跟随路由变化
       activeMenu () {
         return '/' + this.$route.path.split('/')[1]
