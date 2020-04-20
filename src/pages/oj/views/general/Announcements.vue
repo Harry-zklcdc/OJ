@@ -173,7 +173,7 @@
           } else {
             this.$Notice.success({
               title: '签到成功',
-              desc: '稳健佬，明天记得来签到哦'
+              desc: '恭喜稳健佬，获得 ' + res.data.data.experience + ' 稳点，明天记得来签到哦'
             })
             this.days += 1
             this.SighinStatus = true
