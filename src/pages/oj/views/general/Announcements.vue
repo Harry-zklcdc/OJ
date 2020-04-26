@@ -43,7 +43,7 @@
                 <div class="title"><a class="entry" @click="goAnnouncement(announcement)">
                   {{announcement.title}}</a></div>
                 <div class="date">{{announcement.create_time | localtime }}</div>
-                <div class="creator"> By {{announcement.created_by.username}}</div>
+                <div class="creator"> {{$t('m.By')}} {{announcement.created_by.username}}</div>
               </div>
             </li>
           </ul>
@@ -108,12 +108,8 @@
         }
       },
       getAnnouncementList (page = 1) {
-        let params = {
-          limit: this.limit,
-          offset: (page - 1) * this.limit
-        }
         this.btnLoading = true
-        api.getAnnouncementList(params).then(res => {
+        api.getAnnouncementList((page - 1) * this.limit, this.limit).then(res => {
           this.btnLoading = false
           this.announcements = res.data.data.results
           this.total = res.data.data.total
@@ -184,7 +180,7 @@
     computed: {
       title () {
         if (this.listVisible) {
-          return this.isContest ? 'Contest Announcements' : 'Announcements'
+          return this.isContest ? this.$i18n.t('m.Contest_Announcements') : this.$i18n.t('m.Announcements')
         } else {
           return this.announcement.title
         }

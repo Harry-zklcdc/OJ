@@ -7,27 +7,27 @@
         <Icon type="android-settings" size="20"></Icon>
         <div slot="content" id="switches">
           <p>
-            <span>Menu</span>
+            <span>{{$t('m.Menu')}}</span>
             <i-switch v-model="showMenu"></i-switch>
-            <span>Chart</span>
+            <span>{{$t('m.Chart')}}</span>
             <i-switch v-model="showChart"></i-switch>
           </p>
           <p>
-            <span>Auto Refresh(10s)</span>
+            <span>{{$t('m.Auto_Refresh')}}(10s)</span>
             <i-switch :disabled="refreshDisabled" @on-change="handleAutoRefresh"></i-switch>
           </p>
           <template v-if="isContestAdmin">
             <p>
-              <span>RealName</span>
+              <span>{{$t('m.RealName')}}</span>
               <i-switch v-model="showRealName"></i-switch>
             </p>
             <p>
-              <span>Force Update</span>
+              <span>{{$t('m.Force_Update')}}</span>
               <i-switch :disabled="refreshDisabled" v-model="forceUpdate"></i-switch>
             </p>
           </template>
           <template>
-            <Button type="primary" size="small" @click="downloadRankCSV">download csv</Button>
+            <Button type="primary" size="small" @click="downloadRankCSV">{{$t('m.download_csv')}}</Button>
           </template>
         </div>
       </Poptip>
@@ -68,14 +68,14 @@
         columns: [
           {
             align: 'center',
-            width: 60,
+            width: 50,
             fixed: 'left',
             render: (h, params) => {
               return h('span', {}, params.index + (this.page - 1) * this.limit + 1)
             }
           },
           {
-            title: 'User',
+            title: this.$i18n.t('m.User_User'),
             align: 'center',
             minWidth: 100,
             fixed: 'left',
@@ -104,7 +104,7 @@
             }
           },
           {
-            title: 'AC / Total',
+            title: 'AC / ' + this.$i18n.t('m.Total'),
             align: 'center',
             width: 100,
             render: (h, params) => {
@@ -124,7 +124,7 @@
             }
           },
           {
-            title: 'TotalTime',
+            title: this.$i18n.t('m.TotalTime'),
             align: 'center',
             minWidth: 100,
             render: (h, params) => {
@@ -135,7 +135,7 @@
         dataRank: [],
         options: {
           title: {
-            text: 'Top 10 Teams',
+            text: this.$i18n.t('m.Top_10_Teams'),
             left: 'center'
           },
           dataZoom: [
@@ -150,7 +150,7 @@
           toolbox: {
             show: true,
             feature: {
-              saveAsImage: {show: true, title: 'save as image'}
+              saveAsImage: {show: true, title: this.$i18n.t('m.save_as_image')}
             },
             right: '5%'
           },
@@ -280,6 +280,7 @@
             align: 'center',
             minWidth: 100,
             key: problem.id,
+            width: problems.length > 15 ? 80 : null,
             renderHeader: (h, params) => {
               return h('a', {
                 'class': {

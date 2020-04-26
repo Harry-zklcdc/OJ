@@ -49,7 +49,7 @@ export default [
   },
   {
     name: 'problem-list',
-    path: '/problems',
+    path: '/problem',
     meta: {title: 'Problem List'},
     component: ProblemList
   },
@@ -73,7 +73,7 @@ export default [
   },
   {
     name: 'contest-list',
-    path: '/contests',
+    path: '/contest',
     meta: {title: 'Contest List'},
     component: Contest.ContestList
   },
