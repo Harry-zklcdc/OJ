@@ -2,7 +2,7 @@
   <div class="flex-container">
     <div id="problem-main">
       <Card :padding="20" id="submit-code" dis-hover>
-	    <p slot="title">{{$t('m.IDE')}}</p>
+	      <div slot="title" style="font-size:21px; font-weight:500; padding-top:10px; padding-bottom:20px; line-height:30px; padding:5px 15px;">{{$t('m.IDE')}}</div>
         <CodeMirror :value.sync="code"
                     :languages="languages"
                     :language="language"
@@ -56,8 +56,9 @@
 
 <script>
   import CodeMirror from '@oj/components/CodeMirror.vue'
+  import storage from '@/utils/storage'
   import {FormMixin} from '@oj/components/mixins'
-  import {JUDGE_STATUS} from '@/utils/constants'
+  import {JUDGE_STATUS, buildProblemCodeKey} from '@/utils/constants'
   import api from '@oj/api'
 
   export default {
@@ -96,9 +97,21 @@
       }
     },
     mounted () {
+      let problemCode = storage.get(buildProblemCodeKey(-1))
+      let exited = false
+      if (problemCode) {
+        this.language = problemCode.language
+        this.code = problemCode.code
+        this.theme = problemCode.theme
+        exited = true
+      }
       api.getLanguages().then(res => {
         for (var i = 0; i < res.data.data.languages.length; i++) {
           this.languages[i] = res.data.data.languages[i].name
+        }
+        this.languages = this.languages.sort()
+        if (exited === true) {
+          return
         }
         this.language = this.languages[0]
       })
@@ -170,6 +183,11 @@
     beforeRouteLeave (to, from, next) {
       // 防止切换组件后仍然不断请求
       clearInterval(this.refreshStatus)
+      storage.set(buildProblemCodeKey(-1, from.params.contestID), {
+        code: this.code,
+        language: this.language,
+        theme: this.theme
+      })
       next()
     },
     watch: {
