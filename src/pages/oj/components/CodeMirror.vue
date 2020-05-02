@@ -58,8 +58,8 @@
   import 'codemirror/addon/fold/indent-fold.js'
 
   // matchBracket
-  import 'codemirror/addon/edit/matchBrackets'
-  import 'codemirror/addon/edit/closeBrackets'
+  import 'codemirror/addon/edit/matchBrackets.js'
+  import 'codemirror/addon/edit/closeBrackets.js'
 
   export default {
     name: 'CodeMirror',
