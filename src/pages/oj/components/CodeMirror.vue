@@ -57,6 +57,10 @@
   import 'codemirror/addon/fold/brace-fold.js'
   import 'codemirror/addon/fold/indent-fold.js'
 
+  // matchBracket
+  import 'codemirror/addon/edit/matchBrackets'
+  import 'codemirror/addon/edit/closeBrackets'
+
   export default {
     name: 'CodeMirror',
     components: {
@@ -87,10 +91,13 @@
         options: {
           // codemirror options
           tabSize: 4,
+          indentUnit: 4,
           mode: 'text/x-csrc',
           theme: 'solarized',
           lineNumbers: true,
           line: true,
+          matchBrackets: true,
+          autoCloseBrackets: true,
           // 代码折叠
           foldGutter: true,
           gutters: ['CodeMirror-linenumbers', 'CodeMirror-foldgutter'],
