@@ -154,7 +154,7 @@ export const m = {
   About: '关于',
   AboutUs: '关于我们',
   App: '应用',
-  IDE: '在线IDE',
+  IDE: '在线 IDE',
   Judger: '评测机信息',
   FAQ: '常见问题',
   Login: '登录',
