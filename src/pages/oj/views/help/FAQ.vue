@@ -24,7 +24,7 @@
             <p>200 - 499 稳点: <Tag color="#6c5ce7" style="margin-right:-15px;">键盘虾</Tag></p>
             <p>500 - 999 稳点: <Tag color="#1dd1a1" style="margin-right:-15px;">马农</Tag></p>
             <p>1000 - 4999 稳点: <Tag color="#ff9f43" style="margin-right:-15px;">牛人</Tag></p>
-            <p>5000 - 9999 稳点:<Tag color="#ee5253" style="margin-right:-15px;">程序猿</Tag></p>
+            <p>5000 - 9999 稳点: <Tag color="#ee5253" style="margin-right:-15px;">程序猿</Tag></p>
             <p>10000 - ∞ 稳点: <Tag color="#222f3e" style="margin-right:-15px;">攻城狮</Tag></p>
             <p>分别是0 - 6级（程序猿都是从 0 开始的嘛），每个等级都有自己的称号</p>
           </p>
