@@ -127,10 +127,7 @@
         this.$Modal.confirm({
           content: 'Are you sure you want to reset your code?',
           onOk: () => {
-            let template = this.problem.template
-            if (template && template[this.language]) {
-              this.code = template[this.language]
-            }
+            this.code = ''
           }
         })
       },
