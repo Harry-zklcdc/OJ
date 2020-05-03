@@ -1,6 +1,6 @@
 <template>
   <div>
-    <Panel style="float:right; margin-right:0%; width:23%; hight:200px">
+    <Panel v-if="!isContest" style="float:right; margin-right:0%; width:23%; hight:200px">
       <div style="margin:0 10%; font-size:14px; text-align:left; width:100%; line-height:16px; background: transparent; color:#636e72;">今天是：</div>
       <Layout>
         <Sider style="width:25%; min-width:25%; max-width:25%; flex: 0 0 25%; background: transparent;">
@@ -23,7 +23,7 @@
       </Button>
     </Panel>
 
-    <Panel shadow :padding="10" style="width:75%; float:left" >
+    <Panel shadow :padding="10" :style="AnnouncementStyle" >
       <div slot="title">
         {{title}}
       </div>
@@ -80,6 +80,7 @@
         btnLoading: false,
         announcements: [],
         announcement: '',
+        AnnouncementStyle: {'width': '75%', 'float': 'left'},
         listVisible: true,
         timer: null,
         SighinStatus: false,
@@ -103,6 +104,7 @@
       init () {
         if (this.isContest) {
           this.getContestAnnouncementList()
+          this.AnnouncementStyle = {}
         } else {
           this.getAnnouncementList()
         }
