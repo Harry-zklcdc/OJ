@@ -112,6 +112,7 @@ export const m = {
   Problems: 'Problems',
   Announcements: 'Announcements',
   Submissions: 'Submissions',
+  Problem_Submissions: 'Problem Submissions',
   Rankings: 'Rankings',
   Overview: 'Overview',
   Admin_Helper: 'Admin Helper',
@@ -236,7 +237,7 @@ export const m = {
   UnShare: 'UnShare',
   Succeeded: 'Succeeded',
   Real_Time: 'Real Time',
-  Singal: 'Singal',
+  Singal: 'Signal',
   // SubmissionList.vue
   When: 'When',
   ID: 'ID',

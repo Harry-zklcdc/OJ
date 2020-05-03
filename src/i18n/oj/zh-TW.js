@@ -32,6 +32,7 @@ export const m = {
   Problems: '題目',
   Announcements: '公告',
   Submissions: '提交資訊',
+  Problem_Submissions: '題目提交資訊',
   Rankings: '排名',
   Overview: '概要',
   Admin_Helper: '管理員助手',
