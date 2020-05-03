@@ -28,7 +28,7 @@
           </Col>
         </Row>
       </Card>
-	  <Col span="11">
+	    <Col span="11">
         <Card :bordered="false">
           <p slot="title">Input</p>
           <Input v-model="input" type="textarea" :autosize="{minRows: 5,maxRows: 5}" placeholder="Enter Input" />
@@ -38,8 +38,8 @@
       <Col span="11" offset="1">
         <Card shadow>
           <p slot="title">Output:</p>
-		  <p slot="extra">Time: {{time_cost}}ms</p>
-		  <p slot="extra">Memory: {{memory_cost}}MB</p>
+		      <p slot="extra">Time: {{time_cost}}ms</p>
+		      <p slot="extra">Memory: {{memory_cost}}MB</p>
           <Input v-model="output" readonly type="textarea" :autosize="{minRows: 5,maxRows: 5}" placeholder="Output" />
         </Card>
       </Col>
