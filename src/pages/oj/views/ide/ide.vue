@@ -97,13 +97,17 @@
       }
     },
     mounted () {
-      let problemCode = storage.get(buildProblemCodeKey(-1))
+      let Code = storage.get(buildProblemCodeKey(-1))
+      let Input = storage.get(buildProblemCodeKey(-2))
       let exited = false
-      if (problemCode) {
-        this.language = problemCode.language
-        this.code = problemCode.code
-        this.theme = problemCode.theme
+      if (Code) {
+        this.language = Code.language
+        this.code = Code.code
+        this.theme = Code.theme
         exited = true
+      }
+      if (Input) {
+        this.input = Input.code
       }
       api.getLanguages().then(res => {
         for (var i = 0; i < res.data.data.languages.length; i++) {
@@ -146,6 +150,14 @@
         if (this.captchaRequired) {
           data.captcha = this.captchaCode
         }
+        storage.set(buildProblemCodeKey(-1), {
+          code: this.code,
+          language: this.language,
+          theme: this.theme
+        })
+        storage.set(buildProblemCodeKey(-2), {
+          code: this.input
+        })
         api.IDE(data).then(res => {
           var resdata = res.data.data
           if (res.data.data.err) {
@@ -180,10 +192,13 @@
     beforeRouteLeave (to, from, next) {
       // 防止切换组件后仍然不断请求
       clearInterval(this.refreshStatus)
-      storage.set(buildProblemCodeKey(-1, from.params.contestID), {
+      storage.set(buildProblemCodeKey(-1), {
         code: this.code,
         language: this.language,
         theme: this.theme
+      })
+      storage.set(buildProblemCodeKey(-2), {
+        code: this.input
       })
       next()
     },
