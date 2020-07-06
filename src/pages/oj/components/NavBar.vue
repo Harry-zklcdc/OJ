@@ -64,8 +64,8 @@
         <DropdownMenu slot="list">
           <DropdownItem name="1"><Icon type="ios-browsers" color="#2d8cf0" />&emsp;胖次蓝</DropdownItem>
           <DropdownItem name="2"><Icon type="ios-browsers" color="#f58f98" />&emsp;少女粉</DropdownItem>
-	      <DropdownItem name="4"><Icon type="ios-browsers" color="#d63031" />&emsp;姨妈红</DropdownItem>
-		  <DropdownItem name="5"><Icon type="ios-browsers" color="#00b894" />&emsp;原谅绿</DropdownItem>
+	        <DropdownItem name="4"><Icon type="ios-browsers" color="#d63031" />&emsp;姨妈红</DropdownItem>
+		      <DropdownItem name="5"><Icon type="ios-browsers" color="#00b894" />&emsp;原谅绿</DropdownItem>
           <DropdownItem name="3"><Icon type="ios-browsers" color="#673AB7" />&emsp;基佬紫</DropdownItem>
         </DropdownMenu>
       </Dropdown>
