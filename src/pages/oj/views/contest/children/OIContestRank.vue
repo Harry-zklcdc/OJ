@@ -29,7 +29,7 @@
     <div v-show="showChart" class="echarts">
       <ECharts :options="options" ref="chart" auto-resize></ECharts>
     </div>
-    <Table ref="tableRank" height="600" class="table" :columns="columns" :data="dataRank" disabled-hover></Table>
+    <Table ref="tableRank" height="600" :columns="columns" :data="dataRank" disabled-hover></Table>
     <Pagination :total="total"
                 :page-size.sync="limit"
                 :current.sync="page"
@@ -252,10 +252,6 @@
 
   .screen-full {
     margin-right: 8px;
-  }
-  
-  .table {
-    width: calc(100vw - 280px) !important;
   }
 
   #switches {
