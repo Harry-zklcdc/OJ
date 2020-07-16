@@ -236,8 +236,8 @@ export const m = {
   Share: '分享',
   UnShare: '不分享',
   Succeeded: '成功',
-  Real_Time: '实际时间',
-  Singal: 'Signal',
+  Real_Time: '真实时间',
+  Signal: 'Signal',
   // SubmissionList.vue
   When: '提交时间',
   ID: 'ID',

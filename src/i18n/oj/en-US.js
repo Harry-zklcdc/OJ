@@ -237,7 +237,7 @@ export const m = {
   UnShare: 'UnShare',
   Succeeded: 'Succeeded',
   Real_Time: 'Real Time',
-  Singal: 'Signal',
+  Signal: 'Signal',
   // SubmissionList.vue
   When: 'When',
   ID: 'ID',
