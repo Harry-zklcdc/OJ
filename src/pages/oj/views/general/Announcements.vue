@@ -15,7 +15,7 @@
           <div style="margin:50% 15%; font-size:18px; text-align:center; width:26px; line-height:28px; background: transparent; color:#636e72;">{{nowWeek}}</div>
         </Sider>
       </Layout>
-      <div v-if="days" style="margin:0 auto; margin-top:-30px; margin-bottom:15px; font-size:12px; text-align:center; width:140px; line-height:16px; background: transparent; color:#636e72;">您已在稳健 Online Judge 连续签到了 <strong>{{days}}</strong> 天</div>
+      <div v-if="days" style="margin:0 auto; margin-top:-30px; margin-bottom:15px; font-size:12px; text-align:center; width:160px; line-height:16px; background: transparent; color:#636e72;">您已在「{{website.website_name}}」<br>连续签到了 <strong>{{days}}</strong> 天</div>
       <div style="margin-top:-10px; margin:0 auto; font-size:14px; text-align:center; width:80%; line-height:16px; background: transparent; color:#636e72;">{{word}}</div>
       <Button v-if="!SighinStatus" type="primary" icon="ios-alarm" @click="Sighin" long style="margin-top:20px; margin-bottom:20px; margin-left:10%; width:80%;">签到</Button>
       <Button v-else type="primary" icon="ios-alarm" long disabled style="margin-top:20px; margin-bottom:20px; margin-left:10%; width:80%;">
@@ -67,6 +67,7 @@
   import api from '@oj/api'
   import Pagination from '@oj/components/Pagination'
   import axios from 'axios'
+  import { mapState } from 'vuex'
 
   export default {
     name: 'Announcement',
@@ -180,6 +181,7 @@
       }
     },
     computed: {
+      ...mapState(['website']),
       title () {
         if (this.listVisible) {
           return this.isContest ? this.$i18n.t('m.Contest_Announcements') : this.$i18n.t('m.Announcements')
