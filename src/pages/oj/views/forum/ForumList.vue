@@ -114,6 +114,7 @@
           },
           {
             title: this.$i18n.t('m.Forum_Post_Time'),
+            width: 150,
             render: (h, params) => {
               return h('span', time.utcToLocal(params.row.create_time))
             }
