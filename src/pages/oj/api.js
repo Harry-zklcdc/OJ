@@ -282,6 +282,54 @@ export default {
   },
   UserSighin () {
     return ajax('sighin', 'post')
+  },
+  getForumList (offset, limit, searchParams) {
+    let params = {
+      paging: true,
+      offset,
+      limit
+    }
+    Object.keys(searchParams).forEach((element) => {
+      if (searchParams[element]) {
+        params[element] = searchParams[element]
+      }
+    })
+    return ajax('forumpost', 'get', {
+      params: params
+    })
+  },
+  getForum (forumpostID) {
+    return ajax('forumpost', 'get', {
+      params: {
+        forumpost_id: forumpostID
+      }
+    })
+  },
+  submitFourmPost (data) {
+    return ajax('forumpost', 'post', {
+      data
+    })
+  },
+  getForumReplyList (offset, limit, forumpostID, searchParams) {
+    let params = {
+      paging: true,
+      offset,
+      limit,
+      fa_id: forumpostID
+    }
+    Object.keys(searchParams).forEach((element) => {
+      if (searchParams[element]) {
+        params[element] = searchParams[element]
+      }
+    })
+    return ajax('forumreply', 'get', {
+      params: params
+    })
+  },
+  submitFourmReply (data) {
+    return ajax('forumreply', 'post', {
+      data
+    })
   }
 }
 

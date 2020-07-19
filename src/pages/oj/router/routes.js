@@ -16,7 +16,10 @@ import {
   SubmissionDetails,
   SubmissionList,
   UserHome,
-  IDE
+  IDE,
+  Forum,
+  ForumList,
+  ForumPost
 } from '../views'
 
 import * as Contest from '@oj/views/contest'
@@ -186,6 +189,24 @@ export default [
     name: 'IDE',
     meta: {title: 'IDE'},
     component: IDE
+  },
+  {
+    name: 'Forum-list',
+    path: '/Forum',
+    meta: {title: 'Forum Post List'},
+    component: ForumList
+  },
+  {
+    name: 'Forum-post',
+    path: '/Post',
+    meta: {title: 'Forum Post'},
+    component: ForumPost
+  },
+  {
+    name: 'Forum-details',
+    path: '/Forum/:forumpostID',
+    meta: {title: 'Forum Post Details'},
+    component: Forum
   },
   {
     path: '*',

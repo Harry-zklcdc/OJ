@@ -38,6 +38,9 @@
         <Menu-item name="/IDE">
           {{$t('m.IDE')}}
         </Menu-item>
+        <Menu-item name="/Forum">
+          {{$t('m.Forum')}}
+        </Menu-item>
       </Submenu>
       <Submenu name="about">
         <template slot="title">
