@@ -151,6 +151,9 @@
           let forumpost = res.data.data
           this.changeDomTitle({title: forumpost.title})
           this.forumpost = forumpost
+          if (this.isAdminRole) {
+            this.is_author = true
+          }
           if (this.user.username === this.forumpost.author.username) {
             this.is_author = true
           }
