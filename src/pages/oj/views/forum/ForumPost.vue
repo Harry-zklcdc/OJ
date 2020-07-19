@@ -103,6 +103,7 @@
         api.submitFourmPost(data).then(res => {
           this.submitting = false
           this.$success('Success')
+          this.$router.push({name: 'Forum-details', params: {forumpostID: res.data.data.id}})
         })
       }
     },
