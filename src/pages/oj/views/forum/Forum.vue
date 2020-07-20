@@ -193,6 +193,7 @@
         api.submitFourmReply(data).then(res => {
           this.submitting = false
           this.$success('Success')
+          this.forumreplys.unshift(res.data.data)
         })
       },
       GoUserHome (username) {
