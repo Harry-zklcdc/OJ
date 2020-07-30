@@ -59,6 +59,8 @@ export const m = {
   Forum_Post_Information: '帖子資訊',
   Forum_Post: '發帖',
   Forum_Edit: '編輯',
+  Forum_Delete: '删除',
+  Forum_ConfirmDelete: '確認删除?',
   Forum_Reply: '回復',
   Forum_Reply_List: '回復清單',
   Forum_No_Reply: '暫無回復',

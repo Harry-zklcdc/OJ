@@ -49,7 +49,6 @@
         <Row type="flex" justify="space-between">
           <Col :span="12" style="margin-top: 20px;">
             <Button type="warning" icon="edit" :loading="submitting" @click="submitForumReply"
-                          :disabled="forumpostSubmitDisabled || submitted"
                           class="fl-right">
             <span v-if="submitting">{{$t('m.Submitting')}}</span>
             <span v-else>{{$t('m.Submit')}}</span>
@@ -85,14 +84,30 @@
           </li>
         </ul>
       </Card>
-      <VerticalMenu v-if="is_author" @on-click="handleRoute" style="margin-top: 10px;">
-        <VerticalMenu-item :disabled="contestMenuDisabled"
-                           :route="{name: 'Forum-post', query: {id: forumpostID}}">
-          <Icon type="edit"></Icon>
-          {{$t('m.Forum_Edit')}}
-        </VerticalMenu-item>
-      </VerticalMenu>
+      <!--Edit / Top / Light / Nice / Delete-->
+      <div id="VerticalMenu">
+        <Card v-if="visible" :padding="0" dis-hover style="margin-top: 10px;">
+          <ul>
+            <li @click.stop="handleRoute(1)">
+              <Icon type="edit"></Icon>
+              {{$t('m.Forum_Edit')}}
+            </li>
+            <li @click.stop="handleRoute(0)">
+                <Icon type="trash-b"></Icon>
+                &nbsp;{{$t('m.Forum_Delete')}}
+            </li>
+          </ul>
+        </Card>
+      </div>
     </div>
+
+    <Modal
+        v-model="ConfirmDelete"
+        :title="$t('m.Forum_Delete')"
+        @on-ok="ok">
+        <p>{{$t('m.Forum_ConfirmDelete')}}</p>
+    </Modal>
+
   </div>
 </template>
 
@@ -122,7 +137,8 @@
             username: ''
           }
         },
-        is_author: false,
+        visible: false,
+        ConfirmDelete: false,
         forumreply: {
           fa_id: '',
           content: ''
@@ -151,11 +167,11 @@
           let forumpost = res.data.data
           this.changeDomTitle({title: forumpost.title})
           this.forumpost = forumpost
-          if (this.isAdminRole) {
-            this.is_author = true
+          if (this.isSuperAdmin) {
+            this.visible = true
           }
           if (this.user.username === this.forumpost.author.username) {
-            this.is_author = true
+            this.visible = true
           }
         }, () => {
           this.$Loading.error()
@@ -168,8 +184,15 @@
         }
         this.getForumReplyList(1)
       },
-      handleRoute (route) {
-        this.$router.push(route)
+      handleRoute (method) {
+        if (method === 1) {
+          // Edit
+          this.$router.push({name: 'Forum-post', query: {id: this.forumpostID}})
+        }
+        if (method === 0) {
+          // Delete
+          this.ConfirmDelete = true
+        }
       },
       getForumReplyList (page) {
         let offset = (this.page - 1) * this.limit
@@ -196,6 +219,12 @@
           this.forumreplys.unshift(res.data.data)
         })
       },
+      ok () {
+        api.deleteFourmPost(this.forumpostID).then(res => {
+          this.$success('Success')
+          this.$router.push({name: 'Forum-list'})
+        })
+      },
       GoUserHome (username) {
         this.$router.push(
           {
@@ -205,7 +234,7 @@
       }
     },
     computed: {
-      ...mapGetters(['user', 'isAdminRole'])
+      ...mapGetters(['user', 'isSuperAdmin'])
     },
     watch: {
       '$route' () {
@@ -232,6 +261,28 @@
     #right-column {
       flex: none;
       width: 250px;
+    }
+
+    #VerticalMenu {
+      li {
+        border-bottom: 1px dashed #e9eaec;
+        color: #495060;
+        display: block;
+        text-align: left;
+        padding: 15px 20px;
+        &:hover {
+          background: #f8f8f9;
+          border-left: 2px solid #5cadff;
+          color: #2d8cf0;
+        }
+        & > .ivu-icon {
+          font-size: 16px;
+          margin-right: 8px;
+        }
+        &:last-child {
+          border-bottom: none;
+        }
+      }
     }
   }
 

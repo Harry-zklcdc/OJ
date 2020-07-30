@@ -165,6 +165,8 @@ export const m = {
   Forum_Post_Information: '帖子信息',
   Forum_Post: '发帖',
   Forum_Edit: '编辑',
+  Forum_Delete: '删除',
+  Forum_ConfirmDelete: '确认删除?',
   Forum_Reply: '回复',
   Forum_Reply_List: '回复列表',
   Forum_No_Reply: '暂无回复',

@@ -165,6 +165,8 @@ export const m = {
   Forum_Post_Information: 'Post Information',
   Forum_Post: 'Post',
   Forum_Edit: 'Edit',
+  Forum_Delete: 'Delete',
+  Forum_ConfirmDelete: 'Do you Confirm Delete?',
   Forum_Reply: 'Reply',
   Forum_Reply_List: 'Reply List',
   Forum_No_Reply: 'No Reply',

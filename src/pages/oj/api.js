@@ -310,6 +310,14 @@ export default {
       data
     })
   },
+  deleteFourmPost (id) {
+    let params = {
+      id: id
+    }
+    return ajax('forumpost', 'delete', {
+      params: params
+    })
+  },
   getForumReplyList (offset, limit, forumpostID, searchParams) {
     let params = {
       paging: true,
