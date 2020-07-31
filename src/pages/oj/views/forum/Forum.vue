@@ -75,6 +75,10 @@
             <p>{{forumpost.author.username}}</p>
           </li>
           <li>
+            <p>{{$t('m.Sort')}}</p>
+            <p>{{forumpost.sort}}</p>
+          </li>
+          <li>
             <p>{{$t('m.Forum_Post_Time')}}</p>
             <p>{{forumpost.create_time | localtime }}</p>
           </li>
