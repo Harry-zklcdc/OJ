@@ -97,6 +97,9 @@
           id: this.forumpost.id,
           title: this.forumpost.title,
           content: this.forumpost.content,
+          is_top: false,
+          is_light: false,
+          is_nice: false,
           sort: 0,
           son_sort: 0
         }

@@ -225,7 +225,7 @@
         }
       },
       onReset () {
-        this.$router.push({name: 'Forum-list'})
+        this.getForumList()
       },
       handleRoute (route) {
         this.$router.push(route)

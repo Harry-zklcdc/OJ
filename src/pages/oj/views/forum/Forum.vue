@@ -85,16 +85,31 @@
         </ul>
       </Card>
       <!--Edit / Top / Light / Nice / Delete-->
-      <div id="VerticalMenu">
+      <div class="VerticalMenu">
         <Card v-if="visible" :padding="0" dis-hover style="margin-top: 10px;">
           <ul>
-            <li @click.stop="handleRoute(1)">
+            <li @click.stop="ForumPostControl(1)">
               <Icon type="edit"></Icon>
               {{$t('m.Forum_Edit')}}
             </li>
-            <li @click.stop="handleRoute(0)">
-                <Icon type="trash-b"></Icon>
-                &nbsp;{{$t('m.Forum_Delete')}}
+            <li v-if="isSuperAdmin">
+              <Icon type="pin" style="margin-left: 2px;"></Icon>
+              &nbsp;{{$t('m.Forum_Top')}}
+              <i-switch v-model="forumpost.is_top" @on-change="ForumPostControl(2)" style="margin-left: 10px;"></i-switch>
+            </li>
+            <li v-if="isSuperAdmin">
+              <Icon type="lightbulb" style="margin-left: 2px;"></Icon>
+              &nbsp;{{$t('m.Forum_Light')}}
+              <i-switch v-model="forumpost.is_light" @on-change="ForumPostControl(2)" style="margin-left: 10px;"></i-switch>
+            </li>
+            <li v-if="isSuperAdmin">
+              <Icon type="happy" style="margin-left: -1px;"></Icon>
+              {{$t('m.Forum_Nice')}}
+              <i-switch v-model="forumpost.is_nice" @on-change="ForumPostControl(2)" style="margin-left: 10px;"></i-switch>
+            </li>
+            <li class="delete" @click.stop="ForumPostControl(0)">
+                <Icon type="trash-b" style="margin-left: 1px;"></Icon>
+                {{$t('m.Forum_Delete')}}
             </li>
           </ul>
         </Card>
@@ -184,15 +199,34 @@
         }
         this.getForumReplyList(1)
       },
-      handleRoute (method) {
+      ForumPostControl (method) {
         if (method === 1) {
           // Edit
           this.$router.push({name: 'Forum-post', query: {id: this.forumpostID}})
+        }
+        if (method === 2) {
+          // Top / Light / Nice
+          this.submitforumpost()
         }
         if (method === 0) {
           // Delete
           this.ConfirmDelete = true
         }
+      },
+      submitforumpost () {
+        let data = {
+          id: this.forumpost.id,
+          title: this.forumpost.title,
+          content: this.forumpost.content,
+          is_top: this.forumpost.is_top,
+          is_light: this.forumpost.is_light,
+          is_nice: this.forumpost.is_nice,
+          sort: 0,
+          son_sort: 0
+        }
+        api.submitFourmPost(data).then(res => {
+          this.$success('Success')
+        })
       },
       getForumReplyList (page) {
         let offset = (this.page - 1) * this.limit
@@ -261,28 +295,6 @@
     #right-column {
       flex: none;
       width: 250px;
-    }
-
-    #VerticalMenu {
-      li {
-        border-bottom: 1px dashed #e9eaec;
-        color: #495060;
-        display: block;
-        text-align: left;
-        padding: 15px 20px;
-        &:hover {
-          background: #f8f8f9;
-          border-left: 2px solid #5cadff;
-          color: #2d8cf0;
-        }
-        & > .ivu-icon {
-          font-size: 16px;
-          margin-right: 8px;
-        }
-        &:last-child {
-          border-bottom: none;
-        }
-      }
     }
   }
 
@@ -363,6 +375,34 @@
     line-height: 30px;
     padding: 5px 15px;
     margin-bottom: 15px;
+  }
+
+  .VerticalMenu {
+    li {
+      border-bottom: 1px dotted #e9eaec;
+      color: #495060;
+      display: block;
+      text-align: left;
+      padding: 15px 20px;
+      &:hover {
+        background: #f8f8f9;
+        border-left: 2px solid #5cadff;
+        color: #2d8cf0;
+      }
+      & > .ivu-icon {
+        font-size: 16px;
+        margin-right: 8px;
+      }
+      &:last-child {
+        border-bottom: none;
+      }
+    }
+  }
+
+  .delete:hover  {
+    background: #f8f8f9 !important;
+    border-left: 2px solid #ed3f14 !important;
+    color: #ed3f14 !important;
   }
 </style>
 

@@ -310,9 +310,9 @@ export default {
       data
     })
   },
-  deleteFourmPost (id) {
+  deleteFourmPost (forumpostID) {
     let params = {
-      id: id
+      forumpost_id: forumpostID
     }
     return ajax('forumpost', 'delete', {
       params: params
