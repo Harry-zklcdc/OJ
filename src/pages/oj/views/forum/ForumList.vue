@@ -88,7 +88,7 @@
               }
               if (params.row.is_nice) {
                 nice = 'star'
-                nicemargin = '0 0 0 8px'
+                nicemargin = '0 2px 0 8px'
               }
               if (params.row.is_light) light = '#e74c3c'
               return h('div', [
@@ -111,21 +111,21 @@
                 }, params.row.title),
                 h('Icon', {
                   props: {
-                    type: top,
-                    size: '14'
-                  },
-                  style: {
-                    margin: topmargin
-                  }
-                }),
-                h('Icon', {
-                  props: {
                     type: nice,
                     size: '14',
                     color: '#f1c40f'
                   },
                   style: {
                     margin: nicemargin
+                  }
+                }),
+                h('Icon', {
+                  props: {
+                    type: top,
+                    size: '14'
+                  },
+                  style: {
+                    margin: topmargin
                   }
                 })
               ])
