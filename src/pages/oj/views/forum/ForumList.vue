@@ -81,7 +81,11 @@
               let topmargin = ''
               let nice = ''
               let nicemargin = ''
-              let light = '#495060'
+              let light = {
+                padding: '2px 0',
+                overflowX: 'auto',
+                textAlign: 'left'
+              }
               if (params.row.is_top) {
                 top = 'pin'
                 topmargin = '0 0 0 8px'
@@ -90,7 +94,14 @@
                 nice = 'star'
                 nicemargin = '0 2px 0 8px'
               }
-              if (params.row.is_light) light = '#e74c3c'
+              if (params.row.is_light) {
+                light = {
+                  padding: '2px 0',
+                  overflowX: 'auto',
+                  textAlign: 'left',
+                  color: '#e74c3c'
+                }
+              }
               return h('div', [
                 h('Button', {
                   props: {
@@ -102,12 +113,7 @@
                       this.$router.push({name: 'Forum-details', params: {forumpostID: params.row.id}})
                     }
                   },
-                  style: {
-                    padding: '2px 0',
-                    overflowX: 'auto',
-                    textAlign: 'left',
-                    color: light
-                  }
+                  style: light
                 }, params.row.title),
                 h('Icon', {
                   props: {
