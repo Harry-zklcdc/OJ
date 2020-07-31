@@ -338,6 +338,14 @@ export default {
     return ajax('forumreply', 'post', {
       data
     })
+  },
+  deleteFourmReply (id) {
+    let params = {
+      id: id
+    }
+    return ajax('forumreply', 'delete', {
+      params: params
+    })
   }
 }
 

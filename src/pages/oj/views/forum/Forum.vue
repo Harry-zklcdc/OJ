@@ -26,7 +26,14 @@
                 {{reply.author.username}}
               </a>
             </p>
-            <p slot="extra">{{reply.create_time | localtime }} &emsp;&emsp;# {{reply.floor}}</p>
+            <p slot="extra">
+              <Button v-if="visible || reply.author.username === user.username"
+                      class="delete-Button" 
+                      type="text"
+                      @click="ConfirmDeleteForumReply = true, forumreplyID = reply.id">
+                      {{$t('m.Forum_Delete')}}</Button>
+              {{reply.create_time | localtime }} &emsp;&emsp;# {{reply.floor}}
+            </p>
             <div id="forumreply-content" class="markdown-body" v-katex>
               <p class="content" v-html="reply.content"></p>
             </div>
@@ -121,9 +128,16 @@
     </div>
 
     <Modal
-        v-model="ConfirmDelete"
+        v-model="ConfirmDeleteForumPost"
         :title="$t('m.Forum_Delete')"
-        @on-ok="ok">
+        @on-ok="confirmDeletePost">
+        <p>{{$t('m.Forum_ConfirmDelete')}}</p>
+    </Modal>
+
+    <Modal
+        v-model="ConfirmDeleteForumReply"
+        :title="$t('m.Forum_Delete')"
+        @on-ok="confirmDeleteReply">
         <p>{{$t('m.Forum_ConfirmDelete')}}</p>
     </Modal>
 
@@ -157,7 +171,8 @@
           }
         },
         visible: false,
-        ConfirmDelete: false,
+        ConfirmDeleteForumPost: false,
+        ConfirmDeleteForumReply: false,
         forumreply: {
           fa_id: '',
           content: ''
@@ -214,8 +229,14 @@
         }
         if (method === 0) {
           // Delete
-          this.ConfirmDelete = true
+          this.ConfirmDeleteForumPost = true
         }
+      },
+      confirmDeletePost () {
+        api.deleteFourmPost(this.forumpostID).then(res => {
+          this.$success('Success')
+          this.$router.push({name: 'Forum-list'})
+        })
       },
       submitforumpost () {
         let data = {
@@ -256,10 +277,10 @@
           this.forumreplys.unshift(res.data.data)
         })
       },
-      ok () {
-        api.deleteFourmPost(this.forumpostID).then(res => {
+      confirmDeleteReply () {
+        api.deleteFourmReply(this.forumreplyID).then(res => {
           this.$success('Success')
-          this.$router.push({name: 'Forum-list'})
+          this.getForumReplyList(this.page)
         })
       },
       GoUserHome (username) {
@@ -405,6 +426,10 @@
   .delete:hover  {
     background: #f8f8f9 !important;
     border-left: 2px solid #ed3f14 !important;
+    color: #ed3f14 !important;
+  }
+
+  .delete-Button:hover  {
     color: #ed3f14 !important;
   }
 </style>
