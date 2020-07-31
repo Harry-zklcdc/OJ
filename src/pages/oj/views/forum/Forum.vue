@@ -275,6 +275,8 @@
           this.submitting = false
           this.$success('Success')
           this.forumreplys.unshift(res.data.data)
+        }, () => {
+          this.submitting = false
         })
       },
       confirmDeleteReply () {

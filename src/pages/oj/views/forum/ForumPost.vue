@@ -107,6 +107,8 @@
           this.submitting = false
           this.$success('Success')
           this.$router.push({name: 'Forum-details', params: {forumpostID: res.data.data.id}})
+        }, () => {
+          this.submitting = false
         })
       }
     },
