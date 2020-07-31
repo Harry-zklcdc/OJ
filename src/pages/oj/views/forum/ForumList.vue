@@ -77,23 +77,58 @@
             title: this.$i18n.t('m.Forum_Title'),
             width: 800,
             render: (h, params) => {
-              return h('Button', {
-                props: {
-                  type: 'text',
-                  size: 'large'
-                },
-                on: {
-                  click: () => {
-                    this.$router.push({name: 'Forum-details', params: {forumpostID: params.row.id}})
+              let top = ''
+              let topmargin = ''
+              let nice = ''
+              let nicemargin = ''
+              let light = '#495060'
+              if (params.row.is_top) {
+                top = 'pin'
+                topmargin = '0 0 0 8px'
+              }
+              if (params.row.is_nice) {
+                nice = 'star'
+                nicemargin = '0 0 0 8px'
+              }
+              if (params.row.is_light) light = '#e74c3c'
+              return h('div', [
+                h('Button', {
+                  props: {
+                    type: 'text',
+                    size: 'large'
+                  },
+                  on: {
+                    click: () => {
+                      this.$router.push({name: 'Forum-details', params: {forumpostID: params.row.id}})
+                    }
+                  },
+                  style: {
+                    padding: '2px 0',
+                    overflowX: 'auto',
+                    textAlign: 'left',
+                    color: light
                   }
-                },
-                style: {
-                  padding: '2px 0',
-                  overflowX: 'auto',
-                  textAlign: 'left',
-                  width: '100%'
-                }
-              }, params.row.title)
+                }, params.row.title),
+                h('Icon', {
+                  props: {
+                    type: top,
+                    size: '14'
+                  },
+                  style: {
+                    margin: topmargin
+                  }
+                }),
+                h('Icon', {
+                  props: {
+                    type: nice,
+                    size: '14',
+                    color: '#f1c40f'
+                  },
+                  style: {
+                    margin: nicemargin
+                  }
+                })
+              ])
             }
           },
           {

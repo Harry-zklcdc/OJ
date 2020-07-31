@@ -103,7 +103,7 @@
               <i-switch v-model="forumpost.is_light" @on-change="ForumPostControl(2)" style="margin-left: 10px;"></i-switch>
             </li>
             <li v-if="isSuperAdmin">
-              <Icon type="happy" style="margin-left: -1px;"></Icon>
+              <Icon type="star" style="margin-left: -1px;"></Icon>
               {{$t('m.Forum_Nice')}}
               <i-switch v-model="forumpost.is_nice" @on-change="ForumPostControl(2)" style="margin-left: 10px;"></i-switch>
             </li>
@@ -244,8 +244,7 @@
         this.submitting = true
         let data = {
           fa_id: this.forumpostID,
-          content: this.forumreply.content,
-          is_top: false
+          content: this.forumreply.content
         }
         api.submitFourmReply(data).then(res => {
           this.submitting = false
