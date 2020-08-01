@@ -144,6 +144,9 @@
 	  .ivu-card {
       background: @color2;
     }
+    .ivu-layout {
+      background: transparent;
+    }
 	  .ivu-menu-light.ivu-menu-horizontal .ivu-menu-submenu:hover{
 	    color: @color;
 		  border-bottom: 2px solid @color;

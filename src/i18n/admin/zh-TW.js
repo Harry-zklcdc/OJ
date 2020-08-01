@@ -50,6 +50,12 @@ export const m = {
   Footer: '頁尾',
   Allow_Register: '是否允許註冊',
   Submission_List_Show_All: '顯示全部題目的提交',
+  Sort: '板塊',
+  Sort_Name: '板塊名稱',
+  Sort_Permission: '板塊許可權',
+  Add_Sort: '添加板塊',
+  Allow_Post: '是否允許發帖',
+  Allow_Reply: '是否允許回復',
   // JudgeServer.vue
   Judge_Server_Token: 'Judge 伺服器 Token',
   Judge_Server_Info: 'Judge 伺服器',

@@ -62,8 +62,8 @@
             </el-form-item>
           </el-col>
           <el-col :span="24">
-            <el-col :span="12">
-              <el-form-item :label="$t('m.Allow_Register')" label-width="200px">
+            <el-col :span="6">
+              <el-form-item :label="$t('m.Allow_Register')" label-width="150px">
                 <el-switch
                   v-model="websiteConfig.allow_register"
                   active-color="#13ce66"
@@ -71,8 +71,8 @@
                 </el-switch>
               </el-form-item>
             </el-col>
-            <el-col :span="12">
-              <el-form-item :label="$t('m.Submission_List_Show_All')" label-width="200px">
+            <el-col :span="6">
+              <el-form-item :label="$t('m.Submission_List_Show_All')" label-width="150px">
                 <el-switch
                   v-model="websiteConfig.submission_list_show_all"
                   active-color="#13ce66"
@@ -80,10 +80,61 @@
                 </el-switch>
               </el-form-item>
             </el-col>
+            <el-col :span="6">
+              <el-form-item :label="$t('m.Allow_Post')" label-width="150px">
+                <el-switch
+                  v-model="websiteConfig.allow_forum_post"
+                  active-color="#13ce66"
+                  inactive-color="#ff4949">
+                </el-switch>
+              </el-form-item>
+            </el-col>
+            <el-col :span="6">
+              <el-form-item :label="$t('m.Allow_Reply')" label-width="150px">
+                <el-switch
+                  v-model="websiteConfig.allow_forum_reply"
+                  active-color="#13ce66"
+                  inactive-color="#ff4949">
+                </el-switch>
+              </el-form-item>
+            </el-col>
+          </el-col>
+          <el-col :span="24">
+            <div>
+              <el-form-item v-for="(forum_sort, index) in websiteConfig.forum_sort" :key="$t('m.Sort') + index">
+                <Accordion :title="$t('m.Sort') + (index + 1)" style="margin-left: -100px;">
+                  <el-button type="warning" size="small" icon="el-icon-delete" slot="header" @click="deleteSort(index)">
+                    Delete
+                  </el-button>
+                  <el-row :gutter="20">
+                    <el-col :span="12">
+                      <el-form-item :label="$t('m.Sort_Name')" required>
+                        <el-input
+                          :placeholder="$t('m.Sort_Name')"
+                          v-model="forum_sort.name">
+                        </el-input>
+                      </el-form-item>
+                    </el-col>
+                    <el-col :span="12">
+                      <el-form-item :label="$t('m.Sort_Permission')" required>
+                        <el-select v-model="forum_sort.permission" placeholder="All">
+                          <el-option label="All" value="All"></el-option>
+                          <el-option label="Super Admin" value="Super Admin"></el-option>
+                        </el-select>
+                      </el-form-item>
+                    </el-col>
+                  </el-row>
+                </Accordion>
+              </el-form-item>
+            </div>
+            <div class="add-sample-btn">
+              <button type="button" class="add-sorts" @click="addSort()"><i class="el-icon-plus"></i>{{$t('m.Add_Sort')}}
+              </button>
+            </div>
           </el-col>
         </el-row>
       </el-form>
-      <save @click.native="saveWebsiteConfig"></save>
+      <save @click.native="saveWebsiteConfig" style="margin-top: 20px;"></save>
     </Panel>
 
     <Panel :title="$t('About Us Config')">
@@ -102,13 +153,15 @@
 </template>
 
 <script>
+  import Accordion from '../../components/Accordion'
   import Simditor from '../../components/Simditor.vue'
   import api from '../../api.js'
 
   export default {
     name: 'Conf',
     components: {
-      Simditor
+      Simditor,
+      Accordion
     },
     data () {
       return {
@@ -187,6 +240,12 @@
         }).catch(() => {
         })
       },
+      addSort () {
+        this.websiteConfig.forum_sort.push({name: '', permission: ''})
+      },
+      deleteSort (index) {
+        this.websiteConfig.forum_sort.splice(index, 1)
+      },
       saveAboutUs (data) {
         if (this.onit === false) {
           api.updateAboutUs(this.aboutus).then(() => {
@@ -214,3 +273,22 @@
     }
   }
 </script>
+
+<style lang="less" scoped>
+  .add-sorts {
+      width: 100%;
+      background-color: #fff;
+      border: 1px dashed #aaa;
+      outline: none;
+      cursor: pointer;
+      color: #666;
+      height: 35px;
+      font-size: 14px;
+      &:hover {
+        background-color: #f9fafc;
+      }
+      i {
+        margin-right: 10px;
+      }
+    }
+</style>

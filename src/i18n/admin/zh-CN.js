@@ -50,6 +50,12 @@ export const m = {
   Footer: '页脚',
   Allow_Register: '是否允许注册',
   Submission_List_Show_All: '显示全部题目的提交',
+  Sort: '板块',
+  Sort_Name: '板块名称',
+  Sort_Permission: '板块权限',
+  Add_Sort: '添加板块',
+  Allow_Post: '是否允许发帖',
+  Allow_Reply: '是否允许回复',
   // JudgeServer.vue
   Judge_Server_Token: '判题服务器接口',
   Judge_Server_Info: '判题服务器',

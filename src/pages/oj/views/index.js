@@ -8,6 +8,8 @@ import NotFound from './general/404.vue'
 import Home from './general/Home.vue'
 import Announcements from './general/Announcements.vue'
 import IDE from './ide/ide.vue'
+import ForumList from './forum/ForumList.vue'
+import ForumPost from './forum/ForumPost.vue'
 
 // Grouping Components in the Same Chunk
 const SubmissionList = () => import(/* webpackChunkName: "submission" */ '@oj/views/submission/SubmissionList.vue')
@@ -21,13 +23,16 @@ const ResetPassword = () => import(/* webpackChunkName: "password" */ '@oj/views
 
 const Problem = () => import(/* webpackChunkName: "Problem" */ '@oj/views/problem/Problem.vue')
 
+const Forum = () => import(/* webpackChunkName: "Forum" */ '@oj/views/forum/Forum.vue')
+
 export {
   Home, NotFound, Announcements,
   Logout, UserHome, About, FAQ, AboutUs,
   ProblemList, Problem,
   ACMRank, OIRank,
   SubmissionList, SubmissionDetails,
-  ApplyResetPassword, ResetPassword, IDE
+  ApplyResetPassword, ResetPassword,
+  IDE, Forum, ForumList, ForumPost
 }
 /* 组件导出分为两类, 一类常用的直接导出，另一类诸如Login, Logout等用懒加载,懒加载不在此处导出
  *   在对应的route内加载
