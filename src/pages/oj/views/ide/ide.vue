@@ -159,6 +159,8 @@
             this.time_cost = resdata.data[0]['real_time']
             this.memory_cost = parseInt(resdata.data[0]['memory'] / 1024 / 1024)
           }
+        }, () => {
+          this.submitting = false
         })
       },
       beforeunloadFn (e) {
