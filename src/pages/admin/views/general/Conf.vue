@@ -241,7 +241,7 @@
         })
       },
       addSort () {
-        this.websiteConfig.forum_sort.push({name: '', permission: ''})
+        this.websiteConfig.forum_sort.push({name: '', permission: 'All'})
       },
       deleteSort (index) {
         this.websiteConfig.forum_sort.splice(index, 1)
