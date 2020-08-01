@@ -50,6 +50,12 @@ export const m = {
   Footer: 'Footer',
   Allow_Register: 'Allow Register',
   Submission_List_Show_All: 'Submission List Show All',
+  Sort: 'Sort',
+  Sort_Name: 'Sort Name',
+  Sort_Permission: 'Sort Permission',
+  Add_Sort: 'Add Sort',
+  Allow_Post: 'Allow Post',
+  Allow_Reply: 'Allow Reply',
   // JudgeServer.vue
   Judge_Server_Token: 'Judge Server Token',
   Judge_Server_Info: 'Judge Server',

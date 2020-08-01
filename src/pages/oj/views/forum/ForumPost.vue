@@ -6,8 +6,8 @@
         <div class="title">{{$t('m.Forum_Post')}}</div>
         <Form ref="forumpost" :model="forumpost" :rules="ruleValidate" inline style="margin-left: 20px; margin-right: 20px; width: 100%;">
           <FormItem :label="$t('m.Sort')" prop="sort">
-            <Select v-model="forumpost.sort" size="large" style="width:200px; margin-right: 20px;" @change="console.log(forumpost.sort)">
-              <Option v-for="sort in website.forum_sort" :value="sort.id" :key="sort.name">{{ sort.name }}</Option>
+            <Select v-model="forumpost.sort" size="large" style="width:200px; margin-right: 20px;">
+              <Option v-for="(sort, index) in website.forum_sort" :value="index + 1" :key="sort.name">{{ sort.name }}</Option>
             </Select>
           </FormItem>
           <FormItem :label="$t('m.Forum_Title')" prop="title">
@@ -107,6 +107,14 @@
         })
       },
       submitforumpost () {
+        if (this.website.allow_forum_post === false) {
+          this.$error(this.website.website_name + ' does\'t allow to post')
+          return
+        }
+        if (this.website.forum_sort[this.forumpost.sort - 1].permission === 'Super Admin' && this.isSuperAdmin === false) {
+          this.$error(this.website.forum_sort[this.forumpost.sort - 1].name + ' does\'t allow you to post')
+          return
+        }
         if (this.forumpost.title.trim() === '') {
           this.$error('Title can not be empty!')
           return
@@ -135,7 +143,7 @@
       }
     },
     computed: {
-      ...mapGetters(['website'])
+      ...mapGetters(['website', 'isSuperAdmin'])
     },
     watch: {
       '$route' () {

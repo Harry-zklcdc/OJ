@@ -111,12 +111,12 @@
             <li v-if="isSuperAdmin">
               <Icon type="lightbulb" style="margin-left: 2px;"></Icon>
               &nbsp;{{$t('m.Forum_Light')}}
-              <i-switch v-model="forumpost.is_light" @on-change="ForumPostControl(2)" style="margin-left: 10px;"></i-switch>
+              <i-switch v-model="forumpost.is_light" @on-change="ForumPostControl(3)" style="margin-left: 10px;"></i-switch>
             </li>
             <li v-if="isSuperAdmin">
               <Icon type="star" style="margin-left: -1px;"></Icon>
               {{$t('m.Forum_Nice')}}
-              <i-switch v-model="forumpost.is_nice" @on-change="ForumPostControl(2)" style="margin-left: 10px;"></i-switch>
+              <i-switch v-model="forumpost.is_nice" @on-change="ForumPostControl(4)" style="margin-left: 10px;"></i-switch>
             </li>
             <li class="delete" @click.stop="ForumPostControl(0)">
                 <Icon type="trash-b" style="margin-left: 1px;"></Icon>
@@ -224,8 +224,16 @@
           this.$router.push({name: 'Forum-post', query: {id: this.forumpostID}})
         }
         if (method === 2) {
-          // Top / Light / Nice
-          this.submitforumpost()
+          // Top
+          this.submitforumpost(2)
+        }
+        if (method === 3) {
+          // Light
+          this.submitforumpost(3)
+        }
+        if (method === 4) {
+          // Nice
+          this.submitforumpost(4)
         }
         if (method === 0) {
           // Delete
@@ -238,7 +246,18 @@
           this.$router.push({name: 'Forum-list'})
         })
       },
-      submitforumpost () {
+      submitforumpost (model) {
+        if (this.isSuperAdmin === false) {
+          this.$error('User does\'t have permission')
+          return
+        }
+        if (this.website.allow_forum_post === false) {
+          if (model === 2) { this.forumpost.is_top = !this.forumpost.is_top }
+          if (model === 3) { this.forumpost.is_light = !this.forumpost.is_light }
+          if (model === 4) { this.forumpost.is_nice = !this.forumpost.is_nice }
+          this.$error(this.website.website_name + ' does\'t allow to post')
+          return
+        }
         let data = {
           id: this.forumpost.id,
           title: this.forumpost.title,
@@ -250,6 +269,10 @@
         }
         api.submitFourmPost(data).then(res => {
           this.$success('Success')
+        }, () => {
+          if (model === 2) this.forumpost.is_top = !this.forumpost.is_top
+          if (model === 3) this.forumpost.is_light = !this.forumpost.is_light
+          if (model === 4) this.forumpost.is_nice = !this.forumpost.is_nice
         })
       },
       getForumReplyList (page) {
@@ -263,6 +286,10 @@
       submitForumReply () {
         if (this.forumreply.content.trim() === '') {
           this.$error('Reply can not be empty!')
+          return
+        }
+        if (this.website.allow_forum_reply === false) {
+          this.$error(this.website.website_name + ' does\'t allow to reply')
           return
         }
         this.submitting = true

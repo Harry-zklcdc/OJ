@@ -34,11 +34,11 @@
       <Panel :padding="10">
         <div slot="title" class="taglist-title">{{$t('m.Sort')}}</div>
         <br>
-        <Button v-for="sort in website.forum_sort"
+        <Button v-for="(sort, index) in website.forum_sort"
                 :key="sort.name"
-                @click="filterBySort(sort.id)"
+                @click="filterBySort(index + 1)"
                 type="ghost"
-                :disabled="query.sort === sort.id"
+                :disabled="query.sort === index + 1"
                 shape="circle"
                 class="tag-btn">{{sort.name}}
         </Button>
