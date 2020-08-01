@@ -1,6 +1,6 @@
 <template>
   <Row type="flex" :gutter="18">
-    <Col :span=19>
+    <Col :span="19">
     <Panel shadow>
       <div slot="title">{{$t('m.Forum_List')}}</div>
       <div slot="extra">
@@ -34,13 +34,13 @@
       <Panel :padding="10">
         <div slot="title" class="taglist-title">{{$t('m.Sort')}}</div>
         <br>
-        <Button v-for="tag in tagList"
-                :key="tag.name"
-                @click="filterByTag(tag.name)"
+        <Button v-for="sort in website.forum_sort"
+                :key="sort.name"
+                @click="filterBySort(sort.id)"
                 type="ghost"
-                :disabled="query.tag === tag.name"
+                :disabled="query.sort === sort.id"
                 shape="circle"
-                class="tag-btn">{{tag.name}}>
+                class="tag-btn">{{sort.name}}
         </Button>
       </Panel>
       <Spin v-if="loadings.tag" fix size="large"></Spin>
@@ -75,7 +75,7 @@
         problemTableColumns: [
           {
             title: this.$i18n.t('m.Forum_Title'),
-            width: 800,
+            width: 750,
             render: (h, params) => {
               let top = ''
               let topmargin = ''
@@ -147,17 +147,24 @@
                 },
                 on: {
                   click: () => {
-                    this.$router.push({name: 'Forum-details', params: {forumpostID: params.row.id}})
+                    this.filterBySort(params.row.sort)
                   }
+                },
+                style: {
+                  margin: '0 0 0 -22px'
                 }
-              }, params.row.sort)
+              }, this.website.forum_sort[params.row.sort - 1].name)
             }
           },
           {
             title: this.$i18n.t('m.Forum_Post_Time'),
             width: 150,
             render: (h, params) => {
-              return h('span', time.utcToLocal(params.row.create_time))
+              return h('span', {
+                style: {
+                  margin: '0 0 0 -5px'
+                }
+              }, time.utcToLocal(params.row.create_time))
             }
           },
           {
@@ -176,6 +183,9 @@
                         query: {username: params.row.author.username}
                       })
                   }
+                },
+                style: {
+                  margin: '0 0 0 -10px'
                 }
               }, params.row.author.username)
             }
@@ -191,6 +201,7 @@
         routeName: '',
         query: {
           keyword: '',
+          sort: '',
           page: 1
         }
       }
@@ -203,6 +214,7 @@
         this.routeName = this.$route.name
         let query = this.$route.query
         this.query.keyword = query.keyword || ''
+        this.query.sort = query.sort || ''
         this.query.page = parseInt(query.page) || 1
         if (this.query.page < 1) {
           this.query.page = 1
@@ -229,17 +241,12 @@
           this.loadings.table = false
         })
       },
-      getTagList () {
-        api.getProblemTagList().then(res => {
-          this.tagList = res.data.data.sort((a, b) => {
-            return a.name.localeCompare(b.name)
-          })
-          this.loadings.tag = false
-        }, res => {
-          this.loadings.tag = false
-        })
-      },
       filterByKeyword () {
+        this.query.page = 1
+        this.pushRouter()
+      },
+      filterBySort (sortID) {
+        this.query.sort = sortID
         this.query.page = 1
         this.pushRouter()
       },
@@ -266,14 +273,14 @@
         }
       },
       onReset () {
-        this.getForumList()
+        this.$router.push({name: 'Forum-list'})
       },
       handleRoute (route) {
         this.$router.push(route)
       }
     },
     computed: {
-      ...mapGetters(['isAuthenticated'])
+      ...mapGetters(['website', 'isAuthenticated'])
     },
     watch: {
       '$route' (newVal, oldVal) {

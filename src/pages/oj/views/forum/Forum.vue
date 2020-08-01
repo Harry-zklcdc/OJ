@@ -83,7 +83,7 @@
           </li>
           <li>
             <p>{{$t('m.Sort')}}</p>
-            <p>{{forumpost.sort}}</p>
+            <p>{{website.forum_sort[forumpost.sort - 1].name}}</p>
           </li>
           <li>
             <p>{{$t('m.Forum_Post_Time')}}</p>
@@ -246,8 +246,7 @@
           is_top: this.forumpost.is_top,
           is_light: this.forumpost.is_light,
           is_nice: this.forumpost.is_nice,
-          sort: 0,
-          son_sort: 0
+          sort: this.forumpost.sort
         }
         api.submitFourmPost(data).then(res => {
           this.$success('Success')
@@ -294,7 +293,7 @@
       }
     },
     computed: {
-      ...mapGetters(['user', 'isSuperAdmin'])
+      ...mapGetters(['website', 'user', 'isSuperAdmin'])
     },
     watch: {
       '$route' () {

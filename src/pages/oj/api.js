@@ -318,18 +318,13 @@ export default {
       params: params
     })
   },
-  getForumReplyList (offset, limit, forumpostID, searchParams) {
+  getForumReplyList (offset, limit, forumpostID) {
     let params = {
       paging: true,
       offset,
       limit,
       fa_id: forumpostID
     }
-    Object.keys(searchParams).forEach((element) => {
-      if (searchParams[element]) {
-        params[element] = searchParams[element]
-      }
-    })
     return ajax('forumreply', 'get', {
       params: params
     })

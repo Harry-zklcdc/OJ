@@ -4,17 +4,27 @@
       <!--Post main-->
       <Card :padding="20" id="submit-reply" dis-hover>
         <div class="title">{{$t('m.Forum_Post')}}</div>
-        <div style="font-size: 16px; margin-left: 20px; margin-right: 20px;">
-          {{$t('m.Forum_Title')}}:&emsp; 
-          <Input v-model="forumpost.title" placeholder="Title" size="large" style="width: 600px"></Input>
-        </div>
-        <div style="margin-top: 20px; margin-left: 20px; margin-right: 20px;">
-          <Simditor v-model="forumpost.content"></Simditor>
-        </div>
+        <Form ref="forumpost" :model="forumpost" :rules="ruleValidate" inline style="margin-left: 20px; margin-right: 20px; width: 100%;">
+          <FormItem :label="$t('m.Sort')" prop="sort">
+            <Select v-model="forumpost.sort" size="large" style="width:200px; margin-right: 20px;" @change="console.log(forumpost.sort)">
+              <Option v-for="sort in website.forum_sort" :value="sort.id" :key="sort.name">{{ sort.name }}</Option>
+            </Select>
+          </FormItem>
+          <FormItem :label="$t('m.Forum_Title')" prop="title">
+            <Input v-model="forumpost.title" placeholder="Title" size="large" style="width: 600px"></Input>
+          </FormItem>
+        </Form>
+        <Form ref="forumpost" :model="forumpost" :rules="ruleValidate" style="margin-left: 20px; margin-right: 20px; width: 100%;">
+          <FormItem :label="$t('m.Forum_Content')" prop="content">
+            <div style="margin-top: 35px; margin-right: 40px;">
+              <Simditor v-model="forumpost.content"></Simditor>
+            </div>
+          </FormItem>
+        </Form>
         <Row type="flex" justify="space-between">
           <Col :span="12" style="margin-top: 20px; margin-left: 45px;">
             <Button type="warning" icon="edit" :loading="submitting" @click="submitforumpost"
-                          :disabled="forumpostSubmitDisabled || submitted"
+                          :disabled="forumpostSubmitDisabled"
                           class="fl-right">
             <span v-if="submitting">{{$t('m.Submitting')}}</span>
             <span v-else>{{$t('m.Submit')}}</span>
@@ -28,7 +38,7 @@
 </template>
 
 <script>
-  import {mapActions} from 'vuex'
+  import {mapGetters} from 'vuex'
   import {types} from '../../../../store'
   import {FormMixin} from '@oj/components/mixins'
   import api from '@oj/api'
@@ -48,8 +58,18 @@
           id: '',
           title: '',
           content: '',
-          sort: 0,
-          son_sort: 0
+          sort: 0
+        },
+        ruleValidate: {
+          sort: [
+            { required: true, message: 'The Sort cannot be empty', trigger: 'blur' }
+          ],
+          title: [
+            { required: true, message: 'The Title cannot be empty', trigger: 'blur' }
+          ],
+          content: [
+            { required: true, message: 'The Content cannot be empty', trigger: 'blur' }
+          ]
         },
         limit: 20,
         total: 0,
@@ -64,7 +84,6 @@
       this.init()
     },
     methods: {
-      ...mapActions(['changeDomTitle']),
       init () {
         this.$Loading.start()
         if (this.$route.query.id) {
@@ -88,6 +107,10 @@
         })
       },
       submitforumpost () {
+        if (this.forumpost.title.trim() === '') {
+          this.$error('Title can not be empty!')
+          return
+        }
         if (this.forumpost.content.trim() === '') {
           this.$error('Reply can not be empty!')
           return
@@ -100,8 +123,7 @@
           is_top: false,
           is_light: false,
           is_nice: false,
-          sort: 0,
-          son_sort: 0
+          sort: this.forumpost.sort
         }
         api.submitFourmPost(data).then(res => {
           this.submitting = false
@@ -111,6 +133,9 @@
           this.submitting = false
         })
       }
+    },
+    computed: {
+      ...mapGetters(['website'])
     },
     watch: {
       '$route' () {
