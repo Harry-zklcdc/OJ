@@ -1,5 +1,5 @@
 <template>
-  <div class="flex-container">
+  <div v-if="website.allow_forum_post" class="flex-container">
     <div id="forumpost-main">
       <!--ForumPost main-->
       <Panel :padding="40" shadow>
@@ -128,21 +128,31 @@
         </Card>
       </div>
     </div>
-
     <Modal
         v-model="ConfirmDeleteForumPost"
         :title="$t('m.Forum_Delete')"
         @on-ok="confirmDeletePost">
         <p>{{$t('m.Forum_ConfirmDelete')}}</p>
     </Modal>
-
     <Modal
         v-model="ConfirmDeleteForumReply"
         :title="$t('m.Forum_Delete')"
         @on-ok="confirmDeleteReply">
         <p>{{$t('m.Forum_ConfirmDelete')}}</p>
     </Modal>
+  </div>
 
+  <div v-else class="error404">
+    <div class="error404-body-con">
+      <Card>
+        <div class="error404-body-con-title">4<span><Icon type="ios-navigate-outline"></Icon></span>4</div>
+        <p class="error404-body-con-message">YOU&nbsp;&nbsp;LOOK&nbsp;&nbsp;LOST</p>
+        <div class="error404-btn-con">
+          <Button @click="goHome" size="large" style="width: 200px;" type="ghost">{{$t('m.Go_Home')}}</Button>
+          <Button @click="backPage" size="large" style="width: 200px;margin-left: 40px;" type="primary">{{$t('m.Back')}}</Button>
+        </div>
+      </Card>
+    </div>
   </div>
 </template>
 
@@ -321,6 +331,14 @@
             name: 'user-home',
             query: {username: username}
           })
+      },
+      backPage () {
+        this.$router.go(-1)
+      },
+      goHome () {
+        this.$router.push({
+          name: 'home'
+        })
       }
     },
     computed: {
@@ -463,6 +481,63 @@
 
   .delete-Button:hover  {
     color: #ed3f14 !important;
+  }
+
+  @keyframes error404animation {
+    0% {
+      transform: rotateZ(0deg);
+    }
+    20% {
+      transform: rotateZ(-60deg);
+    }
+    40% {
+      transform: rotateZ(-10deg);
+    }
+    60% {
+      transform: rotateZ(50deg);
+    }
+    80% {
+      transform: rotateZ(-20deg);
+    }
+    100% {
+      transform: rotateZ(0deg);
+    }
+  }
+
+  .error404 {
+    &-body-con {
+      width: 700px;
+      height: 500px;
+      margin: 0 auto;
+      &-title {
+        text-align: center;
+        font-size: 240px;
+        font-weight: 700;
+        color: #2d8cf0;
+        height: 260px;
+        line-height: 260px;
+        margin-top: 40px;
+        span {
+          display: inline-block;
+          color: #19be6b;
+          font-size: 230px;
+          animation: error404animation 3s ease 0s infinite alternate;
+        }
+      }
+      &-message {
+        display: block;
+        text-align: center;
+        font-size: 30px;
+        font-weight: 500;
+        letter-spacing: 12px;
+        color: #dddde2;
+      }
+    }
+    &-btn-con {
+      text-align: center;
+      padding: 20px 0;
+      margin-bottom: 40px;
+    }
   }
 </style>
 

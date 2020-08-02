@@ -38,7 +38,7 @@
         <Menu-item name="/IDE">
           {{$t('m.IDE')}}
         </Menu-item>
-        <Menu-item name="/Forum">
+        <Menu-item v-if="website.allow_forum_post" name="/Forum">
           {{$t('m.Forum')}}
         </Menu-item>
       </Submenu>

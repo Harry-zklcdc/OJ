@@ -209,6 +209,7 @@ export default [
     component: Forum
   },
   {
+    name: 'NotFound',
     path: '*',
     meta: {title: '404'},
     component: NotFound
