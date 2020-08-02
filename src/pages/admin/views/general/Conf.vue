@@ -81,7 +81,11 @@
               </el-form-item>
             </el-col>
             <el-col :span="6">
-              <el-form-item :label="$t('m.Allow_Post')" label-width="150px">
+              <el-form-item :label="$t('m.Allow_Forum')" label-width="150px">
+                <el-popover placement="top" trigger="hover" style="margin-left: -62px; margin-right: 56px;">
+                  <p>{{$t('m.Allow_Forum_FAQ')}}</p>
+                  <i slot="reference" class="el-icon-fa-question-circle import-user-icon"></i>
+                </el-popover>
                 <el-switch
                   v-model="websiteConfig.allow_forum_post"
                   active-color="#13ce66"

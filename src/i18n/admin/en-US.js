@@ -56,8 +56,9 @@ export const m = {
   Sort_Name: 'Sort Name',
   Sort_Permission: 'Sort Permission',
   Add_Sort: 'Add Sort',
-  Allow_Post: 'Allow Post',
+  Allow_Forum: 'Open Forum',
   Allow_Reply: 'Allow Reply',
+  Allow_Forum_FAQ: 'When closing, access to the forum is Redirected to 404 and Cannot post!',
   // JudgeServer.vue
   Judge_Server_Token: 'Judge Server Token',
   Judge_Server_Info: 'Judge Server',

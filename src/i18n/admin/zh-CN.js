@@ -56,8 +56,9 @@ export const m = {
   Sort_Name: '板块名称',
   Sort_Permission: '板块权限',
   Add_Sort: '添加板块',
-  Allow_Post: '是否允许发帖',
+  Allow_Forum: '是否开放论坛',
   Allow_Reply: '是否允许回复',
+  Allow_Forum_FAQ: '关闭时,访问论坛重定向至 404, 且无法发帖!',
   // JudgeServer.vue
   Judge_Server_Token: '判题服务器接口',
   Judge_Server_Info: '判题服务器',

@@ -56,8 +56,9 @@ export const m = {
   Sort_Name: '板塊名稱',
   Sort_Permission: '板塊許可權',
   Add_Sort: '添加板塊',
-  Allow_Post: '是否允許發帖',
+  Allow_Forum: '是否開啟論壇',
   Allow_Reply: '是否允許回復',
+  Allow_Forum_FAQ: '關閉時，訪問論壇重定向至404，且無法發帖!',
   // JudgeServer.vue
   Judge_Server_Token: 'Judge 伺服器 Token',
   Judge_Server_Info: 'Judge 伺服器',
