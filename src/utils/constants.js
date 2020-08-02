@@ -93,7 +93,8 @@ export const CONTEST_STATUS_REVERSE = {
 
 export const RULE_TYPE = {
   ACM: 'ACM',
-  OI: 'OI'
+  OI: 'OI',
+  experience: 'experience'
 }
 
 export const CONTEST_TYPE = {

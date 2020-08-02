@@ -10,6 +10,7 @@ import {
   Logout,
   NotFound,
   OIRank,
+  ExperienceRank,
   Problem,
   ProblemList,
   ResetPassword,
@@ -129,6 +130,12 @@ export default [
     path: '/oi-rank',
     meta: {title: 'OI Rankings'},
     component: OIRank
+  },
+  {
+    name: 'experience-rank',
+    path: '/experience-rank',
+    meta: {title: 'Experience Rankings'},
+    component: ExperienceRank
   },
   {
     name: 'user-home',

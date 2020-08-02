@@ -67,7 +67,7 @@ export const m = {
   ACM_Ranklist: 'ACM 排名',
   mood: '格言',
   AC: 'AC',
-  Rating: '评分',
+  Rating: '通过率',
   // Announcements.vue
   Contest_Announcements: '比赛公告',
   By: '创建人',
@@ -215,6 +215,9 @@ export const m = {
   OI_Ranklist: 'OI 排名',
   // OIContestRank.vue
   Total_Score: '总分',
+  // ExperienceRank.vue
+  Experience: '稳点',
+  Experience_Ranklist: '稳点 排名',
   // ProblemList.vue
   Problem_List: '问题列表',
   High: '高',

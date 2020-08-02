@@ -29,6 +29,9 @@
         <Menu-item name="/oi-rank">
           {{$t('m.OI_Rank')}}
         </Menu-item>
+        <Menu-item name="/experience-rank">
+          {{$t('m.Experience_Ranklist')}}
+        </Menu-item>
       </Submenu>
       <Submenu name="onlineapp">
         <template slot="title">

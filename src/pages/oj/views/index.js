@@ -17,6 +17,7 @@ const SubmissionDetails = () => import(/* webpackChunkName: "submission" */ '@oj
 
 const ACMRank = () => import(/* webpackChunkName: "userRank" */ '@oj/views/rank/ACMRank.vue')
 const OIRank = () => import(/* webpackChunkName: "userRank" */ '@oj/views/rank/OIRank.vue')
+const ExperienceRank = () => import(/* webpackChunkName: "userRank" */ '@oj/views/rank/ExperienceRank.vue')
 
 const ApplyResetPassword = () => import(/* webpackChunkName: "password" */ '@oj/views/user/ApplyResetPassword.vue')
 const ResetPassword = () => import(/* webpackChunkName: "password" */ '@oj/views/user/ResetPassword.vue')
@@ -29,7 +30,7 @@ export {
   Home, NotFound, Announcements,
   Logout, UserHome, About, FAQ, AboutUs,
   ProblemList, Problem,
-  ACMRank, OIRank,
+  ACMRank, OIRank, ExperienceRank,
   SubmissionList, SubmissionDetails,
   ApplyResetPassword, ResetPassword,
   IDE, Forum, ForumList, ForumPost

@@ -215,6 +215,9 @@ export const m = {
   OI_Ranklist: 'OI Ranklist',
   // OIContestRank.vue
   Total_Score: 'Total Score',
+  // ExperienceRank.vue
+  Experience: 'Experience',
+  Experience_Ranklist: 'Experience Ranklist',
   // ProblemList.vue
   Problem_List: 'Problem List',
   High: 'High',
