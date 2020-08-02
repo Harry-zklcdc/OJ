@@ -22,7 +22,8 @@
                 :key="reply.id"
                 style="margin-top: 5px;">
             <p slot="title">
-              <a @click="GoUserHome(reply.author.username)">
+              <Tag :color="user_grade[reply.author.grade].color" style="margin-top: -1px;">{{ user_grade[reply.author.grade].name }}</Tag>
+              <a @click="GoUserHome(reply.author.username)" style="">
                 {{reply.author.username}}
               </a>
             </p>
@@ -148,6 +149,7 @@
   import { mapGetters, mapActions } from 'vuex'
   import {types} from '../../../../store'
   import {FormMixin} from '@oj/components/mixins'
+  import { USER_GRADE } from '@/utils/constants'
   import api from '@oj/api'
   import Simditor from '@oj/components/Simditor.vue'
   import Pagination from '@oj/components/Pagination'
@@ -182,6 +184,7 @@
         page: 1,
         total: 0,
         routeName: '',
+        user_grade: USER_GRADE,
         query: {
           page: 1
         }
