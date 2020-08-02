@@ -74,29 +74,55 @@
             title: this.$i18n.t('m.Author'),
             align: 'center',
             render: (h, params) => {
-              return h('div', [
-                h('Tag', {
-                  props: {
-                    color: USER_GRADE[params.row.grade].color
-                  }
-                }, USER_GRADE[params.row.grade].name),
-                h('a', {
-                  style: {
-                    'display': 'inline-block',
-                    'max-width': '150px',
-                    'margin-left': '5px'
-                  },
-                  on: {
-                    click: () => {
-                      this.$router.push(
-                        {
-                          name: 'user-home',
-                          query: {username: params.row.username}
-                        })
+              if (params.row.title) {
+                return h('div', [
+                  h('Tag', {
+                    props: {
+                      color: params.row.title_color
                     }
-                  }
-                }, params.row.username)
-              ])
+                  }, params.row.title),
+                  h('a', {
+                    style: {
+                      'display': 'inline-block',
+                      'max-width': '150px',
+                      'margin-left': '5px'
+                    },
+                    on: {
+                      click: () => {
+                        this.$router.push(
+                          {
+                            name: 'user-home',
+                            query: {username: params.row.username}
+                          })
+                      }
+                    }
+                  }, params.row.username)
+                ])
+              } else {
+                return h('div', [
+                  h('Tag', {
+                    props: {
+                      color: USER_GRADE[params.row.grade].color
+                    }
+                  }, USER_GRADE[params.row.grade].name),
+                  h('a', {
+                    style: {
+                      'display': 'inline-block',
+                      'max-width': '150px',
+                      'margin-left': '5px'
+                    },
+                    on: {
+                      click: () => {
+                        this.$router.push(
+                          {
+                            name: 'user-home',
+                            query: {username: params.row.username}
+                          })
+                      }
+                    }
+                  }, params.row.username)
+                ])
+              }
             }
           },
           {

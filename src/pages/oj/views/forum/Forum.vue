@@ -22,7 +22,8 @@
                 :key="reply.id"
                 style="margin-top: 5px;">
             <p slot="title">
-              <Tag :color="user_grade[reply.author.grade].color" style="margin-top: -1px;">{{ user_grade[reply.author.grade].name }}</Tag>
+              <Tag v-if="reply.author.title" :color="reply.author.title_color" style="margin-top: -1px;">{{ reply.author.title }}</Tag>
+              <Tag v-else :color="user_grade[reply.author.grade].color" style="margin-top: -1px;">{{ user_grade[reply.author.grade].name }}</Tag>
               <a @click="GoUserHome(reply.author.username)" style="">
                 {{reply.author.username}}
               </a>

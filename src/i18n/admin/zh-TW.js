@@ -32,6 +32,8 @@ export const m = {
   Problem_Permission: '試題權限',
   Two_Factor_Auth: '兩步驟驗證',
   Is_Disabled: '是否可用',
+  User_Title: '頭銜',
+  User_Title_Color: '頭銜',
   // Announcement.vue
   General_Announcement: '公告',
   Announcement_Title: '標題',

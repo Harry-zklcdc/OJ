@@ -91,7 +91,8 @@
       <template v-else>
         <Dropdown class="drop-menu" @on-click="handleRoute" placement="bottom" trigger="click">
           <Poptip trigger="hover" :title="`当前 ${ profile.grade } 级`" :content="`当前稳点： ${ profile.experience } 点`" width="200px">
-            <Tag :color="color" style="margin-right:-15px;">{{ gradename }}</Tag>
+            <Tag v-if="profile.user.title" :color="profile.user.title_color" style="margin-right:-15px;">{{ profile.user.title }}</Tag>
+            <Tag v-else :color="color" style="margin-right:-15px;">{{ gradename }}</Tag>
           </Poptip>
           <Button type="text" class="drop-menu-title">{{ user.username }}
             <Icon type="arrow-down-b"></Icon>

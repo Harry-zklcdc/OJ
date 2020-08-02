@@ -221,6 +221,16 @@
               </el-select>
             </el-form-item>
           </el-col>
+          <el-col :span="12">
+            <el-form-item :label="$t('m.User_Title')">
+              <el-input v-model="user.title"></el-input>
+            </el-form-item>
+          </el-col>
+          <el-col :span="12">
+            <el-form-item :label="$t('m.User_Title_Color')">
+              <el-color-picker v-model="user.title_color"></el-color-picker>
+            </el-form-item>
+          </el-col>
           <el-col :span="8">
             <el-form-item :label="$t('m.Two_Factor_Auth')">
               <el-switch

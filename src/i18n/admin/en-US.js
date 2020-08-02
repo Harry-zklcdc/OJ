@@ -32,6 +32,8 @@ export const m = {
   Problem_Permission: 'Problem Permission',
   Two_Factor_Auth: 'Two Factor Auth',
   Is_Disabled: 'Is Disabled',
+  User_Title: 'User Title',
+  User_Title_Color: 'User Title Color',
   // Announcement.vue
   General_Announcement: 'Announcement',
   Announcement_Title: 'Title',

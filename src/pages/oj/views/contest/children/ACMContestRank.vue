@@ -80,27 +80,53 @@
             minWidth: 100,
             fixed: 'left',
             render: (h, params) => {
-              return h('div', [
-                h('Tag', {
-                  props: {
-                    color: USER_GRADE[params.row.user.grade].color
-                  }
-                }, USER_GRADE[params.row.user.grade].name),
-                ('a', {
-                  style: {
-                    display: 'inline-block',
-                    'max-width': '150px'
-                  },
-                  on: {
-                    click: () => {
-                      this.$router.push({
-                        name: 'user-home',
-                        query: {username: params.row.user.username}
-                      })
+              if (params.row.title) {
+                return h('div', [
+                  h('Tag', {
+                    props: {
+                      color: params.row.title_color
                     }
-                  }
-                }, params.row.user.username)
-              ])
+                  }, params.row.title),
+                  h('a', {
+                    style: {
+                      'display': 'inline-block',
+                      'max-width': '150px'
+                    },
+                    on: {
+                      click: () => {
+                        this.$router.push(
+                          {
+                            name: 'user-home',
+                            query: {username: params.row.user.username}
+                          })
+                      }
+                    }
+                  }, params.row.user.username)
+                ])
+              } else {
+                return h('div', [
+                  h('Tag', {
+                    props: {
+                      color: USER_GRADE[params.row.grade].color
+                    }
+                  }, USER_GRADE[params.row.grade].name),
+                  h('a', {
+                    style: {
+                      'display': 'inline-block',
+                      'max-width': '150px'
+                    },
+                    on: {
+                      click: () => {
+                        this.$router.push(
+                          {
+                            name: 'user-home',
+                            query: {username: params.row.user.username}
+                          })
+                      }
+                    }
+                  }, params.row.user.username)
+                ])
+              }
             }
           },
           {

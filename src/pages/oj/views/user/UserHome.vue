@@ -7,7 +7,8 @@
       <div v-if="profile.user">
         <p style="margin-top: -10px">
           <span v-if="profile.user" class="emphasis">
-            <Tag :color="color">{{gradename}}</Tag>
+            <Tag v-if="profile.user.title" :color="profile.user.title_color">{{ profile.user.title }}</Tag>
+            <Tag v-else :color="color">{{ gradename }}</Tag>
             {{profile.user.username}}
           </span>
           <span v-if="profile.school">@{{profile.school}}</span>
