@@ -217,7 +217,7 @@ export const m = {
   Total_Score: 'Total Score',
   // ExperienceRank.vue
   Experience: 'Experience',
-  Experience_Ranklist: 'Experience Ranklist',
+  Experience_Ranklist: 'Experience Rank',
   // ProblemList.vue
   Problem_List: 'Problem List',
   High: 'High',
