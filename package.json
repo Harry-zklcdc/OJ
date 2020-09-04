@@ -29,7 +29,7 @@
     "mem": ">=4.0.0",
     "minimist": ">=0.2.1",
     "moment": "^2.22.1",
-    "papaparse": "^4.4.0",
+    "papaparse": "^5.2.0",
     "raven-js": "^3.25.0",
     "screenfull": "^3.3.2",
     "set-value": ">=2.0.1",
