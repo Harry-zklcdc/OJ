@@ -20,7 +20,7 @@
           <p>
             等级称号如下：
             <p>0 - 99 稳点: <Tag color="#636e72" style="margin-right:-15px;">小白兔</Tag></p>
-            <p>100 - 199 稳点: <Tag color="blue" style="margin-right:-15px;">菜鸟</Tag></p>
+            <p>100 - 199 稳点: <Tag color="primary" style="margin-right:-15px;">菜鸟</Tag></p>
             <p>200 - 499 稳点: <Tag color="#6c5ce7" style="margin-right:-15px;">键盘虾</Tag></p>
             <p>500 - 999 稳点: <Tag color="#1dd1a1" style="margin-right:-15px;">马农</Tag></p>
             <p>1000 - 4999 稳点: <Tag color="#ff9f43" style="margin-right:-15px;">牛人</Tag></p>

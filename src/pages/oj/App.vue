@@ -128,7 +128,7 @@
     }
     .ivu-page-item-active {
       background-color: @color;
-		  border-color: @color
+		  border-color: @color;
     }
   	.ivu-page-item:hover {
       border-color: @color;
@@ -151,6 +151,12 @@
 	    color: @color;
 		  border-bottom: 2px solid @color;
 	  }
+    .ivu-page-item-active a, .ivu-page-item-active:hover a {
+      color: #ffffff;
+    }
+    .ivu-btn-ghost {
+      color: #495060;
+    }
   }
 
   .theme1{  //胖次蓝

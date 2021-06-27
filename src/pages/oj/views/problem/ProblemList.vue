@@ -8,7 +8,7 @@
           <li>
             <Dropdown @on-click="filterByDifficulty">
               <span>{{query.difficulty === '' ? this.$i18n.t('m.Difficulty') : this.$i18n.t('m.' + query.difficulty)}}
-                <Icon type="arrow-down-b"></Icon>
+                <Icon type="md-arrow-dropdown"></Icon>
               </span>
               <Dropdown-menu slot="list">
                 <Dropdown-item name="">{{$t('m.All')}}</Dropdown-item>
@@ -29,11 +29,11 @@
                    @on-enter="filterByKeyword"
                    @on-click="filterByKeyword"
                    placeholder="keyword"
-                   icon="ios-search-strong"/>
+                   icon="ios-search"/>
           </li>
           <li>
             <Button type="info" @click="onReset">
-              <Icon type="refresh"></Icon>
+              <Icon type="md-refresh"></Icon>
               {{$t('m.Reset')}}
             </Button>
           </li>
@@ -137,9 +137,9 @@
             title: this.$i18n.t('m.Level'),
             render: (h, params) => {
               let t = params.row.difficulty
-              let color = 'blue'
-              if (t === 'Low') color = 'green'
-              else if (t === 'High') color = 'yellow'
+              let color = 'primary'
+              if (t === 'Low') color = 'success'
+              else if (t === 'High') color = 'warning'
               return h('Tag', {
                 props: {
                   color: color

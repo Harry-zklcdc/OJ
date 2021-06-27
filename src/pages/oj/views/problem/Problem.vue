@@ -22,7 +22,7 @@
                      v-clipboard:copy="sample.input"
                      v-clipboard:success="onCopy"
                      v-clipboard:error="onCopyError">
-                    <Icon type="clipboard"></Icon>
+                    <Icon type="md-clipboard"></Icon>
                   </a>
                 </p>
                 <pre>{{sample.input}}</pre>
@@ -110,24 +110,24 @@
           </VerticalMenu-item>
 
           <VerticalMenu-item :route="{name: 'contest-announcement-list', params: {contestID: contestID}}">
-            <Icon type="chatbubble-working"></Icon>
+            <Icon type="md-chatbubbles"></Icon>
             {{$t('m.Announcements')}}
           </VerticalMenu-item>
         </template>
 
         <VerticalMenu-item v-if="!this.contestID || OIContestRealTimePermission" :route="submissionRoute">
-          <Icon type="navicon-round"></Icon>
+          <Icon type="md-menu"></Icon>
            {{$t('m.Submissions')}}
         </VerticalMenu-item>
 
         <template v-if="this.contestID">
           <VerticalMenu-item v-if="!this.contestID || OIContestRealTimePermission"
                              :route="{name: 'contest-rank', params: {contestID: contestID}}">
-            <Icon type="stats-bars"></Icon>
+            <Icon type="md-stats"></Icon>
             {{$t('m.Rankings')}}
           </VerticalMenu-item>
           <VerticalMenu-item :route="{name: 'contest-details', params: {contestID: contestID}}">
-            <Icon type="home"></Icon>
+            <Icon type="md-home"></Icon>
             {{$t('m.View_Contest')}}
           </VerticalMenu-item>
         </template>
@@ -135,7 +135,7 @@
 
       <Card id="info">
         <div slot="title" class="header">
-          <Icon type="information-circled"></Icon>
+          <Icon type="md-information-circle"></Icon>
           <span class="card-title">{{$t('m.Information')}}</span>
         </div>
         <ul>

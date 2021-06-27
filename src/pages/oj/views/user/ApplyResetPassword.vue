@@ -5,14 +5,14 @@
       <Form :rules="ruleResetPassword" :model=formResetPassword ref="formResetPassword">
         <Form-item prop="email">
           <Input v-model="formResetPassword.email" :placeholder="$t('m.ApplyEmail')" size="large">
-          <Icon type="ios-email-outline" slot="prepend"></Icon>
+          <Icon type="ios-mail-outline" slot="prepend"></Icon>
           </Input>
         </Form-item>
         <Form-item prop="captcha" style="margin-bottom:10px">
           <div class="oj-captcha">
             <div class="oj-captcha-code">
               <Input v-model="formResetPassword.captcha" :placeholder="$t('m.RCaptcha')" size="large">
-              <Icon type="ios-lightbulb-outline" slot="prepend"></Icon>
+              <Icon type="ios-bulb-outline" slot="prepend"></Icon>
               </Input>
             </div>
             <div class="oj-captcha-img">

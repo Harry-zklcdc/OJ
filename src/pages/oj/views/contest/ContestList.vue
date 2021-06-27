@@ -8,7 +8,7 @@
           <li>
             <Dropdown @on-click="onRuleChange">
               <span>{{query.rule_type === '' ? this.$i18n.t('m.Rule') : this.$i18n.t('m.' + query.rule_type)}}
-                <Icon type="arrow-down-b"></Icon>
+                <Icon type="md-arrow-dropdown"></Icon>
               </span>
               <Dropdown-menu slot="list">
                 <Dropdown-item name="">{{$t('m.All')}}</Dropdown-item>
@@ -20,7 +20,7 @@
           <li>
             <Dropdown @on-click="onStatusChange">
               <span>{{query.status === '' ? this.$i18n.t('m.Status') : this.$i18n.t('m.' + CONTEST_STATUS_REVERSE[query.status].name.replace(/ /g,"_"))}}
-                <Icon type="arrow-down-b"></Icon>
+                <Icon type="md-arrow-dropdown"></Icon>
               </span>
               <Dropdown-menu slot="list">
                 <Dropdown-item name="">{{$t('m.All')}}</Dropdown-item>
@@ -32,7 +32,7 @@
           </li>
           <li>
             <Input id="keyword" @on-enter="changeRoute" @on-click="changeRoute" v-model="query.keyword"
-                   icon="ios-search-strong" placeholder="Keyword"/>
+                   icon="ios-search" placeholder="Keyword"/>
           </li>
         </ul>
       </div>
@@ -47,16 +47,16 @@
                 {{contest.title}}
               </a>
               <template v-if="contest.contest_type != 'Public'">
-                <Icon type="ios-locked-outline" size="20"></Icon>
+                <Icon type="ios-lock-outline" size="20"></Icon>
               </template>
             </p>
             <ul class="detail">
               <li>
-                <Icon type="calendar" color="#3091f2"></Icon>
+                <Icon type="md-calendar" color="#3091f2"></Icon>
                 {{contest.start_time | localtime('YYYY-M-D HH:mm') }}
               </li>
               <li>
-                <Icon type="android-time" color="#3091f2"></Icon>
+                <Icon type="md-time" color="#3091f2"></Icon>
                 {{getDuration(contest.start_time, contest.end_time)}}
               </li>
               <li>

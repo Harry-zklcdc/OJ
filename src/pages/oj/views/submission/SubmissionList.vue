@@ -8,7 +8,7 @@
             <li>
               <Dropdown @on-click="handleResultChange">
                 <span>{{status}}
-                  <Icon type="arrow-down-b"></Icon>
+                  <Icon type="md-arrow-dropdown"></Icon>
                 </span>
                 <Dropdown-menu slot="list">
                   <Dropdown-item name="">{{$t('m.All')}}</Dropdown-item>
@@ -31,7 +31,7 @@
             </li>
 
             <li>
-              <Button type="info" icon="refresh" @click="getSubmissions">{{$t('m.Refresh')}}</Button>
+              <Button type="info" icon="md-refresh" @click="getSubmissions">{{$t('m.Refresh')}}</Button>
             </li>
           </ul>
         </div>
@@ -131,7 +131,7 @@
             render: (h, params) => {
               return h('Tag', {
                 props: {
-                  color: JUDGE_STATUS[params.row.result].color
+                  color: JUDGE_STATUS[params.row.result].type
                 }
               }, this.$i18n.t('m.' + JUDGE_STATUS[params.row.result].name.replace(/ /g, '_')))
             }
@@ -288,7 +288,7 @@
           title: this.$i18n.t('m.Option'),
           fixed: 'right',
           align: 'center',
-          width: 90,
+          width: 110,
           render: (h, params) => {
             return h('Button', {
               props: {

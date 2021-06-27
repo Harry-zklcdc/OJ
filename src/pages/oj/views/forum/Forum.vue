@@ -71,7 +71,7 @@
     <div id="right-column">
       <Card id="info">
         <div slot="title" class="header">
-          <Icon type="information-circled"></Icon>
+          <Icon type="md-information-circle"></Icon>
           <span class="card-title">{{$t('m.Forum_Post_Information')}}</span>
         </div>
         <ul>
@@ -102,26 +102,26 @@
         <Card v-if="visible" :padding="0" dis-hover style="margin-top: 10px;">
           <ul>
             <li @click.stop="ForumPostControl(1)">
-              <Icon type="edit"></Icon>
+              <Icon type="md-create"></Icon>
               {{$t('m.Forum_Edit')}}
             </li>
             <li v-if="isSuperAdmin">
-              <Icon type="pin" style="margin-left: 2px;"></Icon>
+              <Icon type="md-flag" style="margin-left: 2px;"></Icon>
               &nbsp;{{$t('m.Forum_Top')}}
               <i-switch v-model="forumpost.is_top" @on-change="ForumPostControl(2)" style="margin-left: 10px;"></i-switch>
             </li>
             <li v-if="isSuperAdmin">
-              <Icon type="lightbulb" style="margin-left: 2px;"></Icon>
+              <Icon type="ios-bulb" style="margin-left: 2px;"></Icon>
               &nbsp;{{$t('m.Forum_Light')}}
               <i-switch v-model="forumpost.is_light" @on-change="ForumPostControl(3)" style="margin-left: 10px;"></i-switch>
             </li>
             <li v-if="isSuperAdmin">
-              <Icon type="star" style="margin-left: -1px;"></Icon>
+              <Icon type="md-star" style="margin-left: -1px;"></Icon>
               {{$t('m.Forum_Nice')}}
               <i-switch v-model="forumpost.is_nice" @on-change="ForumPostControl(4)" style="margin-left: 10px;"></i-switch>
             </li>
             <li class="delete" @click.stop="ForumPostControl(0)">
-                <Icon type="trash-b" style="margin-left: 1px;"></Icon>
+                <Icon type="md-trash" style="margin-left: 1px;"></Icon>
                 {{$t('m.Forum_Delete')}}
             </li>
           </ul>

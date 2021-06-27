@@ -10,11 +10,11 @@
                    @on-enter="filterByKeyword"
                    @on-click="filterByKeyword"
                    placeholder="keyword"
-                   icon="ios-search-strong"/>
+                   icon="ios-search"/>
           </li>
           <li>
             <Button type="info" @click="onReset">
-              <Icon type="refresh"></Icon>
+              <Icon type="md-refresh"></Icon>
               {{$t('m.Reset')}}
             </Button>
           </li>
@@ -47,7 +47,7 @@
       <VerticalMenu @on-click="handleRoute" style="margin-top: 10px;">
         <VerticalMenu-item :disabled="contestMenuDisabled"
                            :route="{name: 'Forum-post'}">
-          <Icon type="edit"></Icon>
+          <Icon type="md-create"></Icon>
           {{$t('m.Forum_Post')}}
         </VerticalMenu-item>
       </VerticalMenu>
@@ -88,7 +88,7 @@
         problemTableColumns: [
           {
             title: this.$i18n.t('m.Forum_Title'),
-            width: 750,
+            width: 600,
             render: (h, params) => {
               let top = ''
               let topmargin = ''
@@ -100,11 +100,11 @@
                 textAlign: 'left'
               }
               if (params.row.is_top) {
-                top = 'pin'
+                top = 'md-flag'
                 topmargin = '0 0 0 8px'
               }
               if (params.row.is_nice) {
-                nice = 'star'
+                nice = 'md-star'
                 nicemargin = '0 2px 0 8px'
               }
               if (params.row.is_light) {
@@ -171,7 +171,7 @@
           },
           {
             title: this.$i18n.t('m.Forum_Post_Time'),
-            width: 150,
+            width: 180,
             render: (h, params) => {
               return h('span', {
                 style: {

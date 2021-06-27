@@ -11,7 +11,7 @@
                     @changeTheme="onChangeTheme"
                     @changeLang="onChangeLang"></CodeMirror>
         <Row type="flex" justify="space-between">
-          <Col :span="12">
+          <Col span="24">
             <template v-if="captchaRequired">
               <div class="captcha-container">
                 <Tooltip v-if="captchaRequired" content="Click to refresh" placement="top">
@@ -20,37 +20,35 @@
                 <Input v-model="captchaCode" class="captcha-code"/>
               </div>
             </template>
-            <Button type="warning" icon="edit" :loading="submitting" @click="submitCode"
-                    class="fl-right">
+          </Col>
+        </Row>
+        <Row type="flex" justify="space-between">
+          <Col :span="12" style="margin-top: 20px; margin-left: 45px;">
+            <Button type="warning" icon="md-create" :loading="submitting" @click="submitCode"
+              class="fl-right">
               <span v-if="submitting">Submitting</span>
               <span v-else>Submit</span>
             </Button>
           </Col>
         </Row>
       </Card>
-	    <Col span="11">
-        <Card :bordered="false">
-          <p slot="title">Input</p>
-          <Input v-model="input" type="textarea" :autosize="{minRows: 5,maxRows: 5}" placeholder="Enter Input" />
-        </Card>
-      </Col>
-
-      <Col span="11" offset="1">
-        <Card shadow>
-          <p slot="title">Output:</p>
-		      <p slot="extra">Time: {{time_cost}}ms</p>
-		      <p slot="extra">Memory: {{memory_cost}}MB</p>
-          <Input v-model="output" readonly type="textarea" :autosize="{minRows: 5,maxRows: 5}" placeholder="Output" />
-        </Card>
-      </Col>
+      <Row gutter="24">
+	      <Col span="12">
+          <Card :bordered="false">
+            <p slot="title">Input</p>
+            <Input v-model="input" type="textarea" :autosize="{minRows: 5,maxRows: 5}" placeholder="Enter Input" />
+          </Card>
+        </Col>
+        <Col span="12">
+          <Card shadow>
+            <p slot="title">Output:</p>
+		        <p slot="extra">Time: {{time_cost}}ms</p>
+	  	      <p slot="extra">Memory: {{memory_cost}}MB</p>
+            <Input v-model="output" readonly type="textarea" :autosize="{minRows: 5,maxRows: 5}" placeholder="Output" />
+          </Card>
+        </Col>
+      </Row>
     </div>
-
-
-    <Modal v-model="graphVisible">
-      <div slot="footer">
-        <Button type="ghost" @click="graphVisible=false">Close</Button>
-      </div>
-    </Modal>
   </div>
 </template>
 
@@ -71,7 +69,6 @@
       return {
         statusVisible: false,
         captchaRequired: false,
-        graphVisible: false,
         submissionExists: false,
         captchaCode: '',
         captchaSrc: '',

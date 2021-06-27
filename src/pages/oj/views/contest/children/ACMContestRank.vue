@@ -4,7 +4,7 @@
     <div slot="extra">
       <screen-full :height="18" :width="18" class="screen-full"></screen-full>
       <Poptip trigger="hover" placement="left-start">
-        <Icon type="android-settings" size="20"></Icon>
+        <Icon type="md-settings" size="20"></Icon>
         <div slot="content" id="switches">
           <p>
             <span>{{$t('m.Menu')}}</span>

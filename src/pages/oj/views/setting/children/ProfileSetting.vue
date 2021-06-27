@@ -32,16 +32,16 @@
         </div>
         <ButtonGroup vertical class="cropper-btn">
           <Button @click="rotate('left')">
-            <Icon type="arrow-return-left" size="20"></Icon>
+            <Icon type="ios-undo" size="20"></Icon>
           </Button>
           <Button @click="rotate('right')">
-            <Icon type="arrow-return-right" size="20"></Icon>
+            <Icon type="ios-share-alt" size="20"></Icon>
           </Button>
           <Button @click="reselect">
-            <Icon type="refresh" size="20"></Icon>
+            <Icon type="md-refresh" size="20"></Icon>
           </Button>
           <Button @click="finishCrop">
-            <Icon type="checkmark-round" size="20"></Icon>
+            <Icon type="md-checkmark" size="20"></Icon>
           </Button>
         </ButtonGroup>
         <div class="cropper-preview" :style="previewStyle">

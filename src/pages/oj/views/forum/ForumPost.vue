@@ -23,7 +23,7 @@
         </Form>
         <Row type="flex" justify="space-between">
           <Col :span="12" style="margin-top: 20px; margin-left: 45px;">
-            <Button type="warning" icon="edit" :loading="submitting" @click="submitforumpost"
+            <Button type="warning" icon="md-create" :loading="submitting" @click="submitforumpost"
                           :disabled="forumpostSubmitDisabled"
                           class="fl-right">
             <span v-if="submitting">{{$t('m.Submitting')}}</span>
