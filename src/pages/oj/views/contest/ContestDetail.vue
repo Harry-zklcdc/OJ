@@ -15,7 +15,8 @@
               </div>
               <div slot="extra">
                 <Tag type="dot" :color="countdownColor">
-                  <span id="countdown">{{countdown}}</span>
+                  <span v-if="countdown == 'Ended'" id="countdown">{{$t('m.' + countdown)}}</span>
+                  <span v-else id="countdown">{{countdown}}</span>
                 </Tag>
               </div>
               <div v-html="contest.description" class="markdown-body"></div>
