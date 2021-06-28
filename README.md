@@ -14,7 +14,7 @@
 
 ## Get Started
 
-Install nodejs **v8.12.0** first.
+Install Node.JS **v12.16.1** first.
 
 ```
 npm install
