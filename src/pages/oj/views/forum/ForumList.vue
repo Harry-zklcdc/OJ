@@ -132,7 +132,7 @@
                   props: {
                     type: nice,
                     size: '14',
-                    color: '#f1c40f'
+                    color: '#fdcb6e'
                   },
                   style: {
                     margin: nicemargin
@@ -141,7 +141,8 @@
                 h('Icon', {
                   props: {
                     type: top,
-                    size: '14'
+                    size: '14',
+                    color: '#ff7675'
                   },
                   style: {
                     margin: topmargin
@@ -247,9 +248,6 @@
           this.loadings.table = false
           this.total = res.data.data.total
           this.ForumList = res.data.data.results
-          if (this.isAuthenticated) {
-            this.addStatusColumn(this.problemTableColumns, res.data.data.results)
-          }
         }, res => {
           this.loadings.table = false
         })
