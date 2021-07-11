@@ -31,7 +31,7 @@ export const m = {
   User_Type: '用户类型',
   Problem_Permission: '问题权限',
   Two_Factor_Auth: '双因素认证',
-  Is_Disabled: '是否封禁',
+  Is_Disabled: '是否禁用',
   User_Title: '头衔',
   User_Title_Color: '头衔颜色',
   // Announcement.vue
