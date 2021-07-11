@@ -95,11 +95,16 @@
     },
     mounted () {
       let Code = storage.get(buildProblemCodeKey(-1))
+      let OverallCode = storage.get(buildProblemCodeKey('Overall'))
       let exited = false
       if (Code) {
         this.language = Code.language
         this.code = Code.code
         this.theme = Code.theme
+        exited = true
+      } else if (OverallCode) {
+        this.language = OverallCode.language
+        this.theme = OverallCode.theme
         exited = true
       }
       api.getLanguages().then(res => {
@@ -161,6 +166,10 @@
         })
       },
       beforeunloadFn (e) {
+        storage.set(buildProblemCodeKey('Overall'), {
+          language: this.language,
+          theme: this.theme
+        })
         storage.set(buildProblemCodeKey(-1), {
           code: this.code,
           language: this.language,
@@ -194,6 +203,10 @@
       clearInterval(this.refreshStatus)
       storage.set(buildProblemCodeKey(-1), {
         code: this.code,
+        language: this.language,
+        theme: this.theme
+      })
+      storage.set(buildProblemCodeKey('Overall'), {
         language: this.language,
         theme: this.theme
       })

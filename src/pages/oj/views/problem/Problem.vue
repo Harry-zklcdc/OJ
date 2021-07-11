@@ -234,6 +234,7 @@
         theme: 'solarized',
         submissionId: '',
         submitted: false,
+        exited: false,
         result: {
           result: 9
         },
@@ -261,11 +262,24 @@
     },
     beforeRouteEnter (to, from, next) {
       let problemCode = storage.get(buildProblemCodeKey(to.params.problemID, to.params.contestID))
+      let OverallCode = storage.get(buildProblemCodeKey('Overall'))
       if (problemCode) {
+        if (problemCode.code !== '') {
+          next(vm => {
+            vm.language = problemCode.language
+            vm.code = problemCode.code
+            vm.theme = problemCode.theme
+          })
+        } else if (OverallCode) {
+          next(vm => {
+            vm.language = OverallCode.language
+            vm.theme = OverallCode.theme
+          })
+        }
+      } else if (OverallCode && problemCode === null) {
         next(vm => {
-          vm.language = problemCode.language
-          vm.code = problemCode.code
-          vm.theme = problemCode.theme
+          vm.language = OverallCode.language
+          vm.theme = OverallCode.theme
         })
       } else {
         next()
@@ -295,6 +309,9 @@
 
           // 在beforeRouteEnter中修改了, 说明本地有code，无需加载template
           if (this.code !== '') {
+            return
+          }
+          if (this.language !== 'C' && this.problem.languages.includes(this.language)) {
             return
           }
           // try to load problem template
@@ -478,7 +495,7 @@
       submissionStatus () {
         return {
           text: JUDGE_STATUS[this.result.result]['name'],
-          color: JUDGE_STATUS[this.result.result]['color']
+          color: JUDGE_STATUS[this.result.result]['type']
         }
       },
       submissionRoute () {
@@ -496,6 +513,10 @@
       this.$store.commit(types.CHANGE_CONTEST_ITEM_VISIBLE, {menu: true})
       storage.set(buildProblemCodeKey(this.problem._id, from.params.contestID), {
         code: this.code,
+        language: this.language,
+        theme: this.theme
+      })
+      storage.set(buildProblemCodeKey('Overall'), {
         language: this.language,
         theme: this.theme
       })
