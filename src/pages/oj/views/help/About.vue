@@ -5,7 +5,8 @@
       <div class="content markdown-body">
         <ul>
           <li v-for="lang in languages">{{lang.name}} ( {{lang.description}} )
-            <pre>{{lang.config.compile.compile_command}}</pre>
+            <pre v-if="lang.config.compile">{{lang.config.compile.compile_command}}</pre>
+            <pre v-else>{{lang.config.run.command}}</pre>
           </li>
         </ul>
       </div>
