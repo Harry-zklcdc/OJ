@@ -35,7 +35,7 @@
         <div id="problems">
           <div v-if="problems.length">{{$t('m.List_Solved_Problems')}}
             <Poptip v-if="refreshVisible" trigger="hover" placement="right-start">
-              <Icon type="ios-help-outline"></Icon>
+              <Icon type="ios-help-circle-outline"></Icon>
               <div slot="content">
                 <p>If you find the following problem id does not exist,<br> try to click the button.</p>
                 <Button type="info" @click="freshProblemDisplayID">regenerate</Button>
