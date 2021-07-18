@@ -1,7 +1,7 @@
 <template>
   <Row type="flex" justify="space-around">
     <Col :span="20" id="status">
-      <Alert :type="status.type" showIcon>
+      <Alert :type="status.color" showIcon>
         <span class="title">{{$t('m.' + status.statusName.replace(/ /g, "_"))}}</span>
         <div slot="desc" class="content">
           <template v-if="isCE">
