@@ -4,7 +4,7 @@
       <!--ForumPost main-->
       <Panel :padding="40" shadow>
         <div slot="title">{{forumpost.title}}</div>
-        <div id="forumpost-content" class="markdown-body" v-katex>
+        <div id="forumpost-content" class="markdown-body" v-katex v-highlight="code">
           <p class="title">{{$t('m.Forum_Content')}}</p>
           <p class="content" v-html="forumpost.content"></p>
         </div>

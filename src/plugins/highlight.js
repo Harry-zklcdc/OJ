@@ -14,7 +14,7 @@ export default {
       deep: true,
       bind: function (el, binding) {
         // on first bind, highlight all targets
-        Array.from(el.querySelectorAll('code')).forEach((target) => {
+        Array.from(el.querySelectorAll('pre code')).forEach((target) => {
           // if a value is directly assigned to the directive, use this
           // instead of the element content.
           if (binding.value) {
@@ -25,7 +25,7 @@ export default {
       },
       componentUpdated: function (el, binding) {
         // after an update, re-fill the content and then highlight
-        Array.from(el.querySelectorAll('code')).forEach((target) => {
+        Array.from(el.querySelectorAll('pre code')).forEach((target) => {
           if (binding.value) {
             target.textContent = binding.value
           }

@@ -4,7 +4,7 @@
       <!--problem main-->
       <Panel :padding="40" shadow>
         <div slot="title">{{problem.title}}</div>
-        <div id="problem-content" class="markdown-body" v-katex>
+        <div id="problem-content" class="markdown-body" v-katex v-highlight="code">
           <p class="title">{{$t('m.Description')}}</p>
           <p class="content" v-html=problem.description></p>
           <!-- {{$t('m.music')}} -->
