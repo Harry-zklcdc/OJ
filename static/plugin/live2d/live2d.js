@@ -4044,7 +4044,8 @@ default = o;
 	default;
 		var r = this;
 		this.modelSetting.loadModelSetting(i, function() {
-			var t = r.modelHomeDir + r.modelSetting.getModelFile();
+            if (r.modelSetting.getModelFile().substr(0, 4) == 'http') r.modelHomeDir = "";
+            var t = r.modelHomeDir + r.modelSetting.getModelFile();
 			r.loadModelData(t, function(t) {
 				for (var i = 0; i < r.modelSetting.getTextureNum(); i++) {
 					if (/^https?:\/\/|^\/\//i.test(r.modelSetting.getTextureFile(i))) var o = r.modelSetting.getTextureFile(i);

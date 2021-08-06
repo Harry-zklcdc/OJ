@@ -25,10 +25,7 @@
             "none": ["欢迎阅读<span style=\"color:#0099cc;\">『", "』</span>", " - "]
         },
         "referrer_hostname": {
-            "example.com": ["示例网站"],
-            "www.fghrsh.net": ["FGHRSH 的博客"],
-            "www.yangzheng.com.cn": ["稳健 Online Judge"],
-            "192.168.20.14": ["稳健 Online Judge"]
+            "oj.wenjian.club": ["稳健 Online Judge"]
         },
         "model_message": {
             "1": ["来自 Potion Maker 的 Pio 酱 ~"],
