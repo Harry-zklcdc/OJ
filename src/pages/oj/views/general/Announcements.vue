@@ -25,12 +25,12 @@
       <Card shadow style="margin-top:10px">
         <Row>
           <Col span="12">
-            <img src="../../../../assets/VideoQRCode.png" style="width:120px; float:left; margin-left:10%;"/>
-            <p style="text-align:center">关注比赛视频号<br>比赛实时掌握</p>
+            <div align="center"><img src="../../../../assets/VideoQRCode.png" style="width:120px;"/></div>
+            <p style="text-align:center; margin-top:5px">关注比赛视频号<br>比赛实时掌握</p>
           </Col>
           <Col span="12">
-            <img src="../../../../assets/PublicQRCode.png" style="width:120px; float:right; margin-right:10%;"/>
-            <p style="text-align:center">添加微信关注<br>了解更多</p>
+            <div align="center"><img src="../../../../assets/PublicQRCode.png" style="width:120px;"/></div>
+            <p style="text-align:center; margin-top:5px">添加微信关注<br>了解更多</p>
           </Col>
         </Row>
       </Card>
