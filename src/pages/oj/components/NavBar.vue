@@ -33,18 +33,14 @@
           {{$t('m.Experience_Ranklist')}}
         </Menu-item>
       </Submenu>
-      <Submenu name="onlineapp">
-        <template slot="title">
-          <Icon type="ios-cloud" />
-          {{$t('m.App')}}
-        </template>
-        <Menu-item name="/IDE">
-          {{$t('m.IDE')}}
-        </Menu-item>
-        <Menu-item v-if="website.allow_forum_post" name="/Forum">
-          {{$t('m.Forum')}}
-        </Menu-item>
-      </Submenu>
+      <Menu-item v-if="website.allow_forum_post" name="/Forum">
+        <Icon type="md-chatboxes" />
+        {{$t('m.Forum')}}
+      </Menu-item>
+      <Menu-item name="/IDE">
+        <Icon type="md-code" />
+        {{$t('m.IDE')}}
+      </Menu-item>
       <Submenu name="about">
         <template slot="title">
           <Icon type="md-information-circle"></Icon>
@@ -93,7 +89,7 @@
       </template>
       <template v-else>
         <Dropdown class="drop-menu" @on-click="handleRoute" placement="bottom" trigger="click">
-          <Poptip trigger="hover" :title="`当前 ${ profile.grade } 级`" :content="`当前稳点： ${ profile.experience } 点`" width="200px">
+          <Poptip trigger="hover" :title="`当前 ${ profile.grade } 级`" :content="`当前经验点： ${ profile.experience } 点`" width="200px">
             <Tag v-if="profile.user.title" :color="profile.user.title_color" style="margin-right:-15px;">{{ profile.user.title }}</Tag>
             <Tag v-else :color="color" style="margin-right:-15px;">{{ gradename }}</Tag>
           </Poptip>

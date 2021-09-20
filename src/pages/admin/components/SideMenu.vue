@@ -2,7 +2,7 @@
   <el-menu class="vertical_menu"
            :router="true" :default-active="currentPath">
     <div class="logo">
-      <img src="../../../assets/logo.svg" alt="oj admin"/>
+      <span>源代码科创管理后台</span>
     </div>
     <el-menu-item index="/"><i class="el-icon-fa-dashboard"></i>{{$t('m.Dashboard')}}</el-menu-item>
     <el-submenu v-if="isSuperAdmin" index="general">
@@ -60,6 +60,8 @@
     .logo {
       margin: 20px 0;
       text-align: center;
+      font-size: 18px;
+      line-height: 60px;
       img {
         background-color: #fff;
         border-radius: 50%;

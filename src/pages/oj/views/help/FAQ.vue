@@ -9,23 +9,23 @@
             {{$t('m.Where_is_the_input_and_the_output_answer_part_7')}} <code>printf</code> {{$t('m.Where_is_the_input_and_the_output_answer_part_8')}} <code>cout</code> {{$t('m.Where_is_the_input_and_the_output_answer_part_9')}} <code>{{$t('m.Runtime_Error')}}</code>.
           </p>
         </li>
-        <li>「稳点」是什么？
-          <p>「稳健 OnlineJudge」的稳点系统。
-		        您可以通过签到、做题来获取稳点，到达一定稳点可以升级，并获得等级称号。
+        <li>「经验点」是什么？
+          <p>「源代码OJ」的经验点系统。
+		        您可以通过签到、做题来获取经验点，到达一定经验点可以升级，并获得等级称号和进阶奖励（领取奖励请联系郝老师）.
           </p>
-          <p>稳点计算说明:
-            <p>1、签到每次获得 <code>1</code> 稳点。在连续签到的第 <code>3、7、15、30、60、90、120、240、365</code> 天可以分别额外获得 <code>1、2、4、7、12、20、33、54、88</code> 稳点（没错，就是斐波那契数列）；</p>
-            <p>2、每道题目，<strong>第一次 AC </strong>时根据难度（Low、Mid、High），可分别获得 <code>3、8、15</code> 稳点。</p>
+          <p>经验点计算说明:
+            <p>1、签到每次获得 <code>1</code> 经验点。在连续签到的第 <code>3、7、15、30、60、90、120、240、365</code> 天可以分别额外获得 <code>1、2、4、7、12、20、33、54、88</code> 经验点（没错，就是斐波那契数列）；</p>
+            <p>2、每道题目，<strong>第一次 AC </strong>时根据难度（Low、Mid、High），可分别获得 <code>3、8、15</code> 经验点。</p>
           </p>
           <p>
             等级称号如下：
-            <p>0 - 99 稳点: <Tag color="#636e72" style="margin-right:-15px;">小白兔</Tag></p>
-            <p>100 - 199 稳点: <Tag color="primary" style="margin-right:-15px;">菜鸟</Tag></p>
-            <p>200 - 499 稳点: <Tag color="#6c5ce7" style="margin-right:-15px;">键盘虾</Tag></p>
-            <p>500 - 999 稳点: <Tag color="#1dd1a1" style="margin-right:-15px;">马农</Tag></p>
-            <p>1000 - 4999 稳点: <Tag color="#ff9f43" style="margin-right:-15px;">牛人</Tag></p>
-            <p>5000 - 9999 稳点: <Tag color="#ee5253" style="margin-right:-15px;">程序猿</Tag></p>
-            <p>10000 - ∞ 稳点: <Tag color="#222f3e" style="margin-right:-15px;">攻城狮</Tag></p>
+            <p>0 - 99 经验点: <Tag color="#636e72" style="margin-right:-15px;">小白兔</Tag></p>
+            <p>100 - 199 经验点: <Tag color="primary" style="margin-right:-15px;">菜鸟</Tag></p>
+            <p>200 - 499 经验点: <Tag color="#6c5ce7" style="margin-right:-15px;">键盘虾</Tag></p>
+            <p>500 - 999 经验点: <Tag color="#1dd1a1" style="margin-right:-15px;">马农</Tag></p>
+            <p>1000 - 4999 经验点: <Tag color="#ff9f43" style="margin-right:-15px;">牛人</Tag></p>
+            <p>5000 - 9999 经验点: <Tag color="#ee5253" style="margin-right:-15px;">程序猿</Tag></p>
+            <p>10000 - ∞ 经验点: <Tag color="#222f3e" style="margin-right:-15px;">攻城狮</Tag></p>
             <p>分别是0 - 6级（程序猿都是从 0 开始的嘛），每个等级都有自己的称号</p>
           </p>
         </li>
@@ -41,11 +41,6 @@
         </li>
         <li>{{$t('m.About_presentation_error')}}
           <p>{{$t('m.About_presentation_error_answer_part_1')}} <b>{{$t('m.last')}}</b> {{$t('m.About_presentation_error_answer_part_2')}} <code> {{$t('m.Wrong_Answer')}}</code>.</p>
-        </li>
-        <li>{{$t('m.How_to_report_bugs')}}
-          <p>{{$t('m.How_to_report_bugs_answer_part_1')}} <a href="https://github.com/Harry-zklcdc/OnlineJudge">Github</a>
-            {{$t('m.How_to_report_bugs_answer_part_2')}}
-          </p>
         </li>
       </ul>
     </div>

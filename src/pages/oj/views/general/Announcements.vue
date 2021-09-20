@@ -21,6 +21,19 @@
       <Button v-else type="primary" icon="ios-alarm" long disabled style="margin-top:20px; margin-bottom:20px; margin-left:10%; width:80%;">
           签到
       </Button>
+
+      <Card shadow style="margin-top:10px">
+        <Row>
+          <Col span="12">
+            <img src="../../../../assets/VideoQRCode.png" style="width:120px; float:left; margin-left:10%;"/>
+            <p style="text-align:center">关注比赛视频号<br>比赛实时掌握</p>
+          </Col>
+          <Col span="12">
+            <img src="../../../../assets/PublicQRCode.png" style="width:120px; float:right; margin-right:10%;"/>
+            <p style="text-align:center">添加微信关注<br>了解更多</p>
+          </Col>
+        </Row>
+      </Card>
     </Panel>
 
     <Panel shadow :padding="10" :style="AnnouncementStyle" >
@@ -166,13 +179,13 @@
           if (res.data.data === 'Singined') {
             this.$Notice.error({
               title: '签到失败',
-              desc: '稳健佬，您已经签过到了呀 ~ 明天再来哦'
+              desc: '骚年，您已经签过到了呀 ~ 明天再来哦'
             })
             this.isSighin()
           } else {
             this.$Notice.success({
               title: '签到成功',
-              desc: '恭喜稳健佬，获得 ' + res.data.data.experience + ' 稳点，明天记得来签到哦'
+              desc: '恭喜骚年，获得 ' + res.data.data.experience + ' 经验点，明天记得来签到哦'
             })
             this.days += 1
             this.SighinStatus = true
